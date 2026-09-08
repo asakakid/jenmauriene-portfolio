@@ -1,9 +1,14 @@
+import northstarImage from "@/src/app/projects/company/northstar/northstar.webp";
+import sideprojimg from"@/src/app/projects/company/side-projects.webp";
+import experimentsimg from "@/src/app/projects/company/experiments.webp";
+import { StaticImageData } from "next/dist/shared/lib/image-external";
+
 export type Project = {
   id: number;
   title: string;
   category: string;
   description: string;
-  image: string;
+  image: string | StaticImageData;
   technologies: string[];
   href?: string;
 };
@@ -15,7 +20,7 @@ export const projects: Project[] = [
     category: "Webflow · Client Work",
     description:
       "A collection of company builds, fixes, and late-night feedback rounds — with the client names politely wearing disguises.",
-    image: "/images/projects/company-projects.jpg",
+    image: northstarImage,
     technologies: [
       "Webflow",
       "Client-First",
@@ -30,7 +35,7 @@ export const projects: Project[] = [
     category: "Automation · Experiments",
     description:
       "Things I built because I thought, “there has to be a faster way.” Including a scraper that started as a work problem.",
-    image: "/images/projects/side-projects.jpg",
+    image: sideprojimg,
     technologies: [
       "Python",
       "Automation",
@@ -45,7 +50,7 @@ export const projects: Project[] = [
     category: "Next.js · Vibe Coding",
     description:
       "Personal builds, front-end experiments, and places where I let myself poke at code until something interesting happens.",
-    image: "/images/projects/experiments.jpg",
+    image: experimentsimg,
     technologies: [
       "Next.js",
       "Tailwind CSS",

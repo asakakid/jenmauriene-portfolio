@@ -22,17 +22,16 @@ export default function Projects() {
               text-[#7d707a]
             "
           >
-            Selected Work
+            Selected Web Development Work
           </p>
 
+          {/* TOP ROW — HEADING + INTERMISSION */}
           <div
             className="
-              flex
-              flex-col
-              gap-6
-              md:flex-row
+              grid
+              gap-8
+              md:grid-cols-[1.2fr_0.8fr]
               md:items-end
-              md:justify-between
             "
           >
             <h2
@@ -46,69 +45,76 @@ export default function Projects() {
                 md:text-6xl
               "
             >
-              Things I&apos;ve built,
+              Things I've built,
               <br />
               fixed, and fussed over.
             </h2>
 
+            <div
+              className="
+                flex
+                max-w-md
+                items-start
+                gap-3
+                border-l
+                border-[#d8cff4]
+                pl-4
+              "
+            >
+              <EyeOff
+                aria-hidden="true"
+                size={15}
+                className="
+                  mt-1
+                  shrink-0
+                  text-[#9b8fce]
+                "
+              />
+
+              <div>
+                <p
+                  className="
+                    text-sm
+                    font-medium
+                    text-[#5f5560]
+                  "
+                >
+                  A tiny confidentiality intermission:
+                </p>
+
+                <p
+                  className="
+                    mt-1
+                    text-sm
+                    leading-6
+                    text-[#8b7f89]
+                  "
+                >
+                  Some projects completed through my current company are shown under alternative names to protect client confidentiality. The work shown reflects projects I primarily developed and implemented.
+
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* BOTTOM ROW — SUBHEADING */}
+          <div
+            className="
+              mt-7
+              grid
+              md:grid-cols-[1.2fr_0.8fr]
+            "
+          >
             <p
               className="
-                max-w-md
+                max-w-2xl
                 leading-7
                 text-[#7d707a]
               "
             >
-              A mix of Webflow client work and projects where I got to
-              experiment, solve problems, and obsess over the little
-              details.
-            </p>
-          </div>
-        </div>
-
-        {/* CONFIDENTIALITY NOTE */}
-        <div
-          className="
-            mb-10
-            flex
-            max-w-2xl
-            items-start
-            gap-3
-            border-l
-            border-[#d8cff4]
-            pl-4
-          "
-        >
-          <EyeOff
-            aria-hidden="true"
-            size={15}
-            className="
-              mt-1
-              shrink-0
-              text-[#9b8fce]
-            "
-          />
-
-          <div>
-            <p
-              className="
-                text-sm
-                font-medium
-                text-[#5f5560]
-              "
-            >
-              A tiny confidentiality intermission:
-            </p>
-
-            <p
-              className="
-                mt-1
-                text-sm
-                leading-6
-                text-[#8b7f89]
-              "
-            >
-              Some company projects are wearing aliases here. The work
-              is real; the client names are staying offstage. ✦
+              Selected Webflow and front-end development projects spanning
+              client websites, custom interactions, CMS builds, integrations,
+              and the small details that make everything feel finished.
             </p>
           </div>
         </div>

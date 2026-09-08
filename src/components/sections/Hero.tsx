@@ -56,10 +56,6 @@ export default function Hero() {
               >
                 Currently accepting good ideas
               </span>
-
-              <span className="text-[#b49e42]">
-                ✿
-              </span>
             </div>
           </div>
 
@@ -104,7 +100,7 @@ export default function Hero() {
                     text-[#7d707a]
                   "
                 >
-                  Webflow Developer · AI-Assisted Builder
+                  Webflow Developer · Front-End Developer
                 </p>
 
                 <h1
@@ -118,24 +114,10 @@ export default function Hero() {
                     md:text-7xl
                   "
                 >
-                  I make websites
+                  Websites built
                   <br />
-                  feel finished.
+                  with intention.
                 </h1>
-
-                <p
-                  className="
-                    mt-7
-                    max-w-xl
-                    text-base
-                    leading-7
-                    text-[#7d707a]
-                    md:text-lg
-                  "
-                >
-                  Webflow, front-end code, and a healthy amount of
-                  “hmm... this could be nicer.”
-                </p>
 
                 <div
                   className="
@@ -253,15 +235,15 @@ export default function Hero() {
                         text-[#9b8f99]
                       "
                     >
-                      Currently into
+                      What I work with
                     </span>
                   </div>
 
                   <div className="space-y-3">
                     {[
-                      "Webflow builds",
-                      "AI-assisted coding",
-                      "Tiny interaction details",
+                      "Webflow development",
+                      "Custom front-end code",
+                      "Interactive experiences",
                     ].map((item) => (
                       <div
                         key={item}
@@ -319,9 +301,9 @@ export default function Hero() {
                         text-[#806fbd]
                       "
                     >
-                      clean &gt; clever,
+                      probably needs 
                       <br />
-                      always.
+                      one more tweak.
                     </p>
                   </div>
 

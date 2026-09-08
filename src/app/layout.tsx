@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Auri | Webflow Developer",
+  title: "Jen Mauriene — Webflow Developer & Creative Technologist",
   description:
-    "Webflow developer and AI-assisted builder creating polished, responsive digital experiences.",
+    "Webflow developer, creative technologist, and occasional AI accomplice. I build thoughtful websites with Webflow, code, and AI, whatever gets the job done beautifully.",
 };
 
 export default function RootLayout({
