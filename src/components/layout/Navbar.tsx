@@ -29,7 +29,7 @@ export default function Navbar() {
               text-[#29232d]
             "
           >
-            AURI
+            jenmauriene
             <span className="text-[#d96c9b]">.</span>
           </a>
 
