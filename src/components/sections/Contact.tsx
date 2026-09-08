@@ -201,12 +201,12 @@ export default function Contact() {
                       />
                     </span>
 
-                    your@email.com
+                    builtbyjenmauriene@gmail.com
                   </a>
 
                   <div className="flex flex-wrap gap-3">
                     <a
-                      href="https://linkedin.com/in/YOUR-USERNAME"
+                      href="www.linkedin.com/in/jenmauriene"
                       target="_blank"
                       rel="noreferrer"
                       className="
@@ -229,7 +229,7 @@ export default function Contact() {
                     </a>
 
                     <a
-                      href="https://github.com/YOUR-USERNAME"
+                      href="https://github.com/asakakid"
                       target="_blank"
                       rel="noreferrer"
                       className="
