@@ -206,9 +206,7 @@ export default function Contact() {
 
                   <div className="flex flex-wrap gap-3">
                     <a
-                      href="www.linkedin.com/in/jenmauriene"
-                      target="_blank"
-                      rel="noreferrer"
+                      href="https://www.linkedin.com/in/jen-mauriene-ramos-a04499369/"
                       className="
                         rounded-full
                         border
@@ -230,8 +228,6 @@ export default function Contact() {
 
                     <a
                       href="https://github.com/asakakid"
-                      target="_blank"
-                      rel="noreferrer"
                       className="
                         rounded-full
                         border
