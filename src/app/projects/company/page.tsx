@@ -16,7 +16,7 @@ const companyProjects = [
     eyebrow: "Webflow Development",
     description:
       "My first full Webflow project assignment — translating supplied designs into a responsive multi-page build using Client-First, reusable components, and a custom search interaction.",
-    image: "/images/projects/solerabank.png",
+    image: "/images/projects/solerabank.webp",
     technologies: [
       "Webflow",
       "Client-First",
@@ -104,7 +104,7 @@ const companyProjects = [
   eyebrow: "Webflow Development · Map Integration",
   description:
     "A heavy-equipment website built from supplied Figma designs in Webflow, with CMS-driven product content and a custom dealer-finder experience using Mapbox and location search functionality.",
-  image: "/images/projects/hzm.png",
+  image: "/images/projects/hzm.webp",
   technologies: [
     "Webflow",
     "Figma",
