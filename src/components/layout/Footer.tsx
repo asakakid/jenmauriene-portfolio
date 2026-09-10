@@ -105,7 +105,7 @@ export default function Footer() {
               />
 
               <a
-                href="https://www.linkedin.com/in/jenmauriene"
+                href="https://www.linkedin.com/in/jenmauriene/"
                 className="
                   text-[#7d707a]
                   transition-colors
