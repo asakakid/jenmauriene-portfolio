@@ -1,30 +1,80 @@
 import Link from "next/link";
 import {
   ArrowLeft,
-  EyeOff,
+  ArrowUpRight,
+  Component,
+  ExternalLink,
+  LayoutTemplate,
+  MonitorSmartphone,
   Search,
   Sparkles,
 } from "lucide-react";
 
 import Container from "@/src/components/layout/Container";
-import Button from "@/src/components/ui/Button";
+
+const projectDetails = [
+  {
+    label: "Role",
+    value: "Primary Webflow Developer",
+  },
+  {
+    label: "Project type",
+    value: "Professional Client Work",
+  },
+  {
+    label: "Completed through",
+    value: "Dorxata",
+  },
+  {
+    label: "Focus",
+    value: "Webflow · Figma Implementation",
+  },
+];
+
+const technologies = [
+  "Webflow",
+  "Client-First",
+  "Components",
+  "Responsive Development",
+  "Webflow Interactions",
+];
+
+const highlights = [
+  {
+    icon: LayoutTemplate,
+    title: "Built from supplied designs",
+    description:
+      "I translated the provided designs into a complete multi-page Webflow implementation, building the site structure from the ground up.",
+  },
+  {
+    icon: Component,
+    title: "Reusable Webflow structure",
+    description:
+      "I used Client-First conventions and reusable components to keep the build organized, consistent, and easier to maintain across its pages.",
+  },
+  {
+    icon: MonitorSmartphone,
+    title: "Responsive implementation",
+    description:
+      "I worked through desktop, tablet, and mobile layouts to make sure the supplied design translated cleanly across different viewport sizes.",
+  },
+  {
+    icon: Search,
+    title: "Custom navigation interaction",
+    description:
+      "One of my favorite details was a navigation search interaction where the search field expands while the surrounding navigation links collapse to make room for it.",
+  },
+];
+
+const liveUrl = "https://www.solerabank.com/";
 
 export default function NorthstarPage() {
-  const highlights = [
-    "Built from scratch in Webflow",
-    "Client-First structure",
-    "Reusable Webflow components",
-    "Around 5 pages",
-    "Responsive implementation",
-    "Custom nav search interaction",
-  ];
-
   return (
-    <main className="pb-20 pt-28">
+    <main className="pb-24 pt-28 md:pt-32">
       <Container>
         {/* BACK */}
         <Link
-          href="/#work"
+          href="/projects/company"
           className="
             group
             mb-10
@@ -47,7 +97,7 @@ export default function NorthstarPage() {
             "
           />
 
-          Back to projects
+          Back to professional work
         </Link>
 
         {/* HERO */}
@@ -66,7 +116,7 @@ export default function NorthstarPage() {
             lg:p-14
           "
         >
-          {/* ambient light */}
+          {/* AMBIENT GLOWS */}
           <div
             aria-hidden="true"
             className="
@@ -77,7 +127,7 @@ export default function NorthstarPage() {
               h-72
               w-72
               rounded-full
-              bg-[#b9a7ee]/10
+              bg-[#efa6c1]/12
               blur-[90px]
             "
           />
@@ -88,186 +138,179 @@ export default function NorthstarPage() {
               pointer-events-none
               absolute
               -bottom-24
-              left-0
+              left-[25%]
               h-72
               w-72
               rounded-full
-              bg-[#efa6c1]/8
+              bg-[#b9a7ee]/10
               blur-[90px]
             "
           />
 
-          <div
-            className="
-              relative
-              z-10
-              grid
-              gap-12
-              lg:grid-cols-[1.05fr_0.95fr]
-              lg:gap-16
-            "
-          >
-            {/* LEFT */}
-            <div>
+          <div className="relative z-10">
+            {/* EYEBROW */}
+            <div className="mb-6 flex flex-wrap items-center gap-3">
               <div
                 className="
-                  mb-5
-                  flex
+                  inline-flex
                   items-center
                   gap-2
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
+                  rounded-full
+                  border
+                  border-[#e3dbf4]
+                  bg-white/60
+                  px-3
+                  py-1.5
                 "
               >
-                <span>Company Project</span>
+                <Sparkles size={13} className="text-[#d96c9b]" />
 
                 <span
-                  aria-hidden="true"
                   className="
-                    h-1
-                    w-1
-                    rounded-full
-                    bg-[#cfc6ce]
+                    text-xs
+                    uppercase
+                    tracking-[0.14em]
+                    text-[#7d707a]
                   "
-                />
-
-                <span>Webflow Development</span>
+                >
+                  Professional Work
+                </span>
               </div>
 
-              <h1
-                className="
-                  max-w-3xl
-                  text-5xl
-                  font-semibold
-                  leading-[0.94]
-                  tracking-[-0.06em]
-                  text-[#29232d]
-                  md:text-7xl
-                "
-              >
-                Project Northstar
-              </h1>
+              <span className="text-xs text-[#aaa0a8]">
+                Webflow · Figma Implementation
+              </span>
+            </div>
 
-              <p
-                className="
-                  mt-6
-                  max-w-2xl
-                  text-lg
-                  leading-8
-                  text-[#7d707a]
-                "
-              >
-                My first full project assignment at Dorxata — a
-                multi-page Webflow build that taught me a lot about
-                structure, implementation, and why small interactions
-                are sometimes the most satisfying part.
-              </p>
-
-              {/* NDA NOTE */}
-              <div
-                className="
-                  mt-7
-                  flex
-                  max-w-xl
-                  items-start
-                  gap-3
-                  border-l
-                  border-[#d8cff4]
-                  pl-4
-                "
-              >
-                <EyeOff
-                  size={15}
+            {/* TITLE + DETAILS */}
+            <div
+              className="
+                grid
+                gap-10
+                lg:grid-cols-[1.2fr_0.8fr]
+                lg:items-end
+                lg:gap-16
+              "
+            >
+              <div>
+                <h1
                   className="
-                    mt-1
-                    shrink-0
-                    text-[#8f7ccf]
+                    max-w-4xl
+                    text-5xl
+                    font-semibold
+                    leading-[0.92]
+                    tracking-[-0.06em]
+                    text-[#29232d]
+                    md:text-7xl
                   "
-                />
+                >
+                  Solerabank
+                </h1>
 
                 <p
                   className="
-                    text-sm
-                    leading-6
-                    text-[#8b7f89]
+                    mt-7
+                    max-w-2xl
+                    text-lg
+                    leading-8
+                    text-[#7d707a]
                   "
                 >
-                  The project is real. The name is not. Confidentiality
-                  says the client gets to stay mysterious. :)
+                  My first full Webflow project assignment — a
+                  multi-page build from supplied designs that gave me my
+                  first opportunity to take ownership of an entire
+                  implementation from structure to responsive polish.
                 </p>
-              </div>
-            </div>
 
-            {/* RIGHT — QUICK NOTES */}
-            <div
-              className="
-                flex
-                items-center
-                justify-center
-              "
-            >
+                {/* LIVE SITE CTA */}
+                <a
+                  href={liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    group
+                    mt-8
+                    inline-flex
+                    items-center
+                    gap-3
+                    rounded-full
+                    bg-[#29232d]
+                    px-5
+                    py-3
+                    text-sm
+                    font-medium
+                    text-white
+                    transition-all
+                    duration-300
+                    hover:-translate-y-0.5
+                    hover:bg-[#806fbd]
+                    hover:shadow-[0_12px_30px_rgba(79,61,73,0.15)]
+                  "
+                >
+                  Visit live website
+
+                  <ExternalLink
+                    size={15}
+                    className="
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5
+                    "
+                  />
+                </a>
+              </div>
+
+              {/* PROJECT DETAILS */}
               <div
                 className="
-                  w-full
-                  max-w-sm
-                  rotate-[-1deg]
-                  rounded-[28px]
+                  rounded-[26px]
                   border
                   border-white/85
-                  bg-white/70
-                  p-7
-                  shadow-[0_20px_50px_rgba(79,61,73,0.07)]
+                  bg-white/62
+                  p-6
                   backdrop-blur-xl
                 "
               >
-                <Sparkles
-                  size={16}
-                  className="mb-4 text-[#b9a7ee]"
-                />
-
                 <p
                   className="
+                    mb-5
                     text-xs
+                    font-medium
                     uppercase
                     tracking-[0.14em]
                     text-[#9b8f99]
                   "
                 >
-                  Build notes
+                  Project details
                 </p>
 
-                <div className="mt-5 space-y-3">
-                  {highlights.map((item) => (
+                <div className="divide-y divide-[#ebe5ec]">
+                  {projectDetails.map((detail) => (
                     <div
-                      key={item}
+                      key={detail.label}
                       className="
-                        flex
-                        items-start
-                        gap-3
+                        grid
+                        grid-cols-[0.8fr_1.2fr]
+                        gap-4
+                        py-4
+                        first:pt-0
+                        last:pb-0
                       "
                     >
+                      <span className="text-sm text-[#aaa0a8]">
+                        {detail.label}
+                      </span>
+
                       <span
                         className="
-                          mt-2
-                          h-1.5
-                          w-1.5
-                          shrink-0
-                          rounded-full
-                          bg-[#efa6c1]
-                        "
-                      />
-
-                      <p
-                        className="
                           text-sm
-                          leading-6
+                          font-medium
                           text-[#5f5560]
                         "
                       >
-                        {item}
-                      </p>
+                        {detail.value}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -276,69 +319,204 @@ export default function NorthstarPage() {
           </div>
         </section>
 
-        {/* THE ASSIGNMENT */}
-        <section className="py-20 md:py-24">
-          <div
-            className="
-              grid
-              gap-10
-              lg:grid-cols-[0.7fr_1.3fr]
-              lg:gap-20
-            "
-          >
-            <div>
-              <p
-                className="
-                  mb-4
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
-                "
-              >
-                The assignment
-              </p>
+        {/* THE PROJECT */}
+        <section
+          className="
+            grid
+            gap-10
+            py-20
+            md:py-28
+            lg:grid-cols-[0.75fr_1.25fr]
+            lg:gap-20
+          "
+        >
+          <div>
+            <p
+              className="
+                text-sm
+                uppercase
+                tracking-[0.14em]
+                text-[#7d707a]
+              "
+            >
+              The project
+            </p>
+          </div>
 
-              <h2
-                className="
-                  max-w-md
-                  text-4xl
-                  font-semibold
-                  leading-[0.98]
-                  tracking-[-0.05em]
-                  text-[#29232d]
-                  md:text-5xl
-                "
-              >
-                My first proper build.
-                No pressure.
-              </h2>
-            </div>
+          <div>
+            <h2
+              className="
+                max-w-3xl
+                text-4xl
+                font-semibold
+                leading-[1]
+                tracking-[-0.05em]
+                text-[#29232d]
+                md:text-5xl
+              "
+            >
+              The first one I got to fully own.
+            </h2>
 
             <div
               className="
-                max-w-2xl
+                mt-8
+                max-w-3xl
                 space-y-5
-                leading-7
+                text-base
+                leading-8
                 text-[#7d707a]
               "
             >
               <p>
-                The design was provided by our design team, and my job
-                was to turn it into a working Webflow site from scratch.
+                This was my first full project assignment at Dorxata.
+                The designs were supplied by the design team, and my
+                responsibility was translating them into a complete,
+                functional Webflow website.
               </p>
 
               <p>
-                The project was around five pages and built using
-                Client-First, reusable Webflow components, and a clean
-                structure that would be easy to maintain after handoff.
+                The project consisted of roughly five pages and was
+                developed using Client-First conventions, reusable
+                components, and a structured Webflow build intended to
+                stay manageable after implementation.
               </p>
 
               <p>
-                It wasn&apos;t a wildly complex build — and that&apos;s
-                part of why I still like it. The focus was on keeping
-                everything organized, responsive, and intentional.
+                It wasn&apos;t the most technically complicated project
+                I&apos;ve worked on since, but it became an important one
+                for me because it was where I started moving from
+                assisting with development work to taking responsibility
+                for a complete build.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CONTRIBUTIONS */}
+        <section
+          className="
+            relative
+            overflow-hidden
+            rounded-[32px]
+            border
+            border-[#e8e0f4]
+            bg-[#f7f3ff]/60
+            p-7
+            md:p-10
+            lg:p-12
+          "
+        >
+          <div
+            aria-hidden="true"
+            className="
+              pointer-events-none
+              absolute
+              -right-16
+              -top-16
+              h-52
+              w-52
+              rounded-full
+              bg-[#b9a7ee]/15
+              blur-[70px]
+            "
+          />
+
+          <div className="relative z-10">
+            <div
+              className="
+                mb-10
+                grid
+                gap-6
+                lg:grid-cols-[0.8fr_1.2fr]
+              "
+            >
+              <div>
+                <p
+                  className="
+                    text-xs
+                    uppercase
+                    tracking-[0.14em]
+                    text-[#8f7ccf]
+                  "
+                >
+                  My contribution
+                </p>
+              </div>
+
+              <h2
+                className="
+                  max-w-3xl
+                  text-3xl
+                  font-semibold
+                  tracking-[-0.045em]
+                  text-[#29232d]
+                  md:text-4xl
+                "
+              >
+                From supplied design to structured Webflow build.
+              </h2>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              {highlights.map((highlight) => {
+                const Icon = highlight.icon;
+
+                return (
+                  <div
+                    key={highlight.title}
+                    className="
+                      rounded-[28px]
+                      border
+                      border-white/80
+                      bg-white/55
+                      p-7
+                      shadow-[0_18px_50px_rgba(79,61,73,0.04)]
+                      backdrop-blur-xl
+                      md:p-8
+                    "
+                  >
+                    <div
+                      className="
+                        mb-6
+                        flex
+                        h-11
+                        w-11
+                        items-center
+                        justify-center
+                        rounded-full
+                        border
+                        border-[#eadff0]
+                        bg-white/70
+                        text-[#d96c9b]
+                      "
+                    >
+                      <Icon size={18} />
+                    </div>
+
+                    <h3
+                      className="
+                        text-xl
+                        font-semibold
+                        tracking-[-0.03em]
+                        text-[#29232d]
+                      "
+                    >
+                      {highlight.title}
+                    </h3>
+
+                    <p
+                      className="
+                        mt-3
+                        leading-7
+                        text-[#7d707a]
+                      "
+                    >
+                      {highlight.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -346,353 +524,466 @@ export default function NorthstarPage() {
         {/* SEARCH INTERACTION */}
         <section
           className="
-            border-y
-            border-[#e9e3ea]
-            py-16
-            md:py-20
+            grid
+            gap-10
+            py-20
+            md:py-28
+            lg:grid-cols-[0.8fr_1.2fr]
+            lg:gap-20
           "
         >
-          <div
-            className="
-              grid
-              gap-12
-              lg:grid-cols-[1fr_1fr]
-              lg:gap-16
-            "
-          >
-            <div>
-              <div
-                className="
-                  mb-5
-                  flex
-                  items-center
-                  gap-2
-                "
-              >
-                <Search
-                  size={16}
-                  className="text-[#d96c9b]"
-                />
-
-                <p
-                  className="
-                    text-sm
-                    uppercase
-                    tracking-[0.14em]
-                    text-[#7d707a]
-                  "
-                >
-                  My favorite detail
-                </p>
-              </div>
-
-              <h2
-                className="
-                  max-w-xl
-                  text-3xl
-                  font-semibold
-                  leading-[1]
-                  tracking-[-0.045em]
-                  text-[#29232d]
-                  md:text-5xl
-                "
-              >
-                The search bar had no business being this fun.
-              </h2>
-            </div>
-
+          <div>
             <div
               className="
-                max-w-2xl
-                space-y-5
-                leading-7
-                text-[#7d707a]
+                mb-5
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#d8cff4]
+                bg-white/60
+                text-[#806fbd]
               "
             >
-              <p>
-                The navigation included a search function, but instead of
-                treating it like a normal input that just appears, I
-                wanted the interaction to feel more deliberate.
-              </p>
-
-              <p>
-                When you hover over the search icon, the search field
-                expands across the navigation while the other nav links
-                smoothly collapse to zero width to make room for it.
-              </p>
-
-              <p
-                className="
-                  font-medium
-                  text-[#29232d]
-                "
-              >
-                Tiny interaction. Extremely satisfying.
-              </p>
+              <Search size={18} />
             </div>
-          </div>
 
-          {/* INTERACTION DIAGRAM */}
-          <div
-            className="
-              mt-12
-              rounded-[28px]
-              border
-              border-white/80
-              bg-white/46
-              p-6
-              shadow-[0_18px_50px_rgba(79,61,73,0.05)]
-              backdrop-blur-xl
-              md:p-8
-            "
-          >
             <p
               className="
-                mb-6
-                text-xs
+                text-sm
                 uppercase
                 tracking-[0.14em]
-                text-[#9b8f99]
+                text-[#7d707a]
               "
             >
-              Roughly what happens
+              Favorite detail
             </p>
+          </div>
 
-            <div
+          <div>
+            <h2
               className="
-                grid
-                gap-8
-                md:grid-cols-[1fr_auto_1fr]
-                md:items-center
+                max-w-3xl
+                text-3xl
+                font-semibold
+                tracking-[-0.045em]
+                text-[#29232d]
+                md:text-4xl
               "
             >
-              {/* REST */}
-              <div>
-                <p
-                  className="
-                    mb-3
-                    text-xs
-                    text-[#9b8f99]
-                  "
-                >
-                  Rest
-                </p>
-
-                <div
-                  className="
-                    flex
-                    items-center
-                    gap-4
-                    rounded-full
-                    border
-                    border-[#e5dfe6]
-                    bg-white/70
-                    px-5
-                    py-3
-                  "
-                >
-                  <span className="text-sm text-[#7d707a]">
-                    Home
-                  </span>
-
-                  <span className="text-sm text-[#7d707a]">
-                    About
-                  </span>
-
-                  <span className="text-sm text-[#7d707a]">
-                    Services
-                  </span>
-
-                  <Search
-                    size={15}
-                    className="ml-auto text-[#806fbd]"
-                  />
-                </div>
-              </div>
-
-              <span
-                className="
-                  hidden
-                  text-[#b9a7ee]
-                  md:block
-                "
-              >
-                →
-              </span>
-
-              {/* HOVER */}
-              <div>
-                <p
-                  className="
-                    mb-3
-                    text-xs
-                    text-[#9b8f99]
-                  "
-                >
-                  Hover
-                </p>
-
-                <div
-                  className="
-                    flex
-                    items-center
-                    rounded-full
-                    border
-                    border-[#d8cff4]
-                    bg-[#f8f5ff]
-                    px-5
-                    py-3
-                  "
-                >
-                  <Search
-                    size={15}
-                    className="mr-3 text-[#806fbd]"
-                  />
-
-                  <span className="text-sm text-[#9b8f99]">
-                    Search...
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* WHAT I LEARNED */}
-        <section className="py-20 md:py-24">
-          <div
-            className="
-              grid
-              gap-10
-              lg:grid-cols-[0.8fr_1.2fr]
-              lg:gap-20
-            "
-          >
-            <div>
-              <p
-                className="
-                  mb-4
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
-                "
-              >
-                What I learned
-              </p>
-
-              <h2
-                className="
-                  max-w-lg
-                  text-4xl
-                  font-semibold
-                  leading-[0.98]
-                  tracking-[-0.05em]
-                  text-[#29232d]
-                  md:text-5xl
-                "
-              >
-                Simple doesn&apos;t mean thoughtless.
-              </h2>
-            </div>
+              A tiny search interaction I was way too excited about.
+            </h2>
 
             <div
               className="
-                max-w-2xl
+                mt-6
+                max-w-3xl
                 space-y-5
-                leading-7
+                text-base
+                leading-8
                 text-[#7d707a]
               "
             >
               <p>
-                This project taught me a lot about building cleanly from
-                an existing design system instead of trying to make the
-                implementation more complicated than it needed to be.
+                The navigation included a search function, and I wanted
+                opening it to feel integrated into the navigation rather
+                than simply displaying another input on top of it.
               </p>
 
               <p>
-                Good structure, reusable components, responsive behavior,
-                and a few intentional interactions can do a lot of the
-                heavy lifting.
+                When the search interaction is triggered, the search
+                field expands across the navigation while the surrounding
+                navigation links collapse to make room for it.
               </p>
 
-              <p
-                className="
-                  font-medium
-                  text-[#29232d]
-                "
-              >
-                It was my first full assignment, so yes, I&apos;m probably
-                a little sentimental about it.
+              <p>
+                It was a small part of the overall build, but it became
+                one of those details that made me appreciate how much
+                thoughtful motion can change the feel of an otherwise
+                straightforward interface.
               </p>
             </div>
           </div>
         </section>
 
-        {/* CLOSING */}
+        {/* INTERACTION DIAGRAM */}
         <section
           className="
             rounded-[30px]
             border
             border-white/80
-            bg-white/48
-            px-7
-            py-10
-            shadow-[0_20px_60px_rgba(79,61,73,0.06)]
+            bg-white/46
+            p-6
+            shadow-[0_18px_50px_rgba(79,61,73,0.05)]
             backdrop-blur-xl
-            md:px-10
-            md:py-12
+            md:p-8
           "
         >
+          <p
+            className="
+              mb-6
+              text-xs
+              uppercase
+              tracking-[0.14em]
+              text-[#9b8f99]
+            "
+          >
+            Interaction breakdown
+          </p>
+
+          <div
+            className="
+              grid
+              gap-8
+              md:grid-cols-[1fr_auto_1fr]
+              md:items-center
+            "
+          >
+            {/* REST */}
+            <div>
+              <p className="mb-3 text-xs text-[#9b8f99]">
+                Default navigation
+              </p>
+
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-4
+                  rounded-full
+                  border
+                  border-[#e5dfe6]
+                  bg-white/70
+                  px-5
+                  py-3
+                "
+              >
+                <span className="text-sm text-[#7d707a]">Home</span>
+                <span className="text-sm text-[#7d707a]">About</span>
+                <span className="text-sm text-[#7d707a]">Services</span>
+
+                <Search
+                  size={15}
+                  className="ml-auto text-[#806fbd]"
+                />
+              </div>
+            </div>
+
+            <span className="hidden text-[#b9a7ee] md:block">
+              →
+            </span>
+
+            {/* ACTIVE */}
+            <div>
+              <p className="mb-3 text-xs text-[#9b8f99]">
+                Search active
+              </p>
+
+              <div
+                className="
+                  flex
+                  items-center
+                  rounded-full
+                  border
+                  border-[#d8cff4]
+                  bg-[#f8f5ff]
+                  px-5
+                  py-3
+                "
+              >
+                <Search
+                  size={15}
+                  className="mr-3 text-[#806fbd]"
+                />
+
+                <span className="text-sm text-[#9b8f99]">
+                  Search...
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DEVELOPMENT LESSON */}
+        <section
+          className="
+            grid
+            gap-10
+            border-b
+            border-[#e9e3ea]
+            py-20
+            md:py-28
+            lg:grid-cols-[0.8fr_1.2fr]
+            lg:gap-20
+          "
+        >
+          <div>
+            <p
+              className="
+                text-sm
+                uppercase
+                tracking-[0.14em]
+                text-[#7d707a]
+              "
+            >
+              The development lesson
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                max-w-3xl
+                text-3xl
+                font-semibold
+                tracking-[-0.045em]
+                text-[#29232d]
+                md:text-4xl
+              "
+            >
+              Simple doesn&apos;t mean thoughtless.
+            </h2>
+
+            <p
+              className="
+                mt-6
+                max-w-3xl
+                text-base
+                leading-8
+                text-[#7d707a]
+              "
+            >
+              This project taught me a lot about translating an existing
+              design system without making the implementation more
+              complicated than it needed to be. Good structure,
+              consistent classes, reusable elements, and responsive
+              behavior did most of the heavy lifting.
+            </p>
+
+            <p
+              className="
+                mt-5
+                max-w-3xl
+                text-base
+                leading-8
+                text-[#7d707a]
+              "
+            >
+              It also taught me to pay attention to the smaller
+              interaction details. Even on a relatively straightforward
+              website, those moments can make the finished implementation
+              feel much more intentional.
+            </p>
+          </div>
+        </section>
+
+        {/* TECH */}
+        <section className="py-16 md:py-20">
           <div
             className="
               flex
               flex-col
-              gap-7
+              gap-6
               md:flex-row
-              md:items-end
+              md:items-center
               md:justify-between
             "
           >
             <div>
               <p
                 className="
-                  mb-3
                   text-xs
                   uppercase
                   tracking-[0.14em]
-                  text-[#9b8f99]
+                  text-[#aaa0a8]
                 "
               >
-                End note
+                Tools & technologies
               </p>
 
               <h2
                 className="
-                  max-w-2xl
-                  text-3xl
+                  mt-2
+                  text-2xl
                   font-semibold
-                  leading-[1]
-                  tracking-[-0.045em]
+                  tracking-[-0.035em]
                   text-[#29232d]
-                  md:text-5xl
                 "
               >
-                Real project.
-                Fake name.
-                Very real attachment to that search interaction.
+                What I worked with
               </h2>
             </div>
 
-            <Button
-              href="/#contact"
-              variant="secondary"
-              showArrow={false}
-              className="w-fit shrink-0 px-6 py-3"
-            >
-              Work with me
-            </Button>
+            <div className="flex max-w-2xl flex-wrap gap-2">
+              {technologies.map((technology) => (
+                <span
+                  key={technology}
+                  className="
+                    rounded-full
+                    border
+                    border-white
+                    bg-white/60
+                    px-4
+                    py-2
+                    text-sm
+                    text-[#7d707a]
+                  "
+                >
+                  {technology}
+                </span>
+              ))}
+            </div>
           </div>
+        </section>
+
+        {/* TAKEAWAY */}
+        <section
+          className="
+            rounded-[32px]
+            border
+            border-white/80
+            bg-white/50
+            p-7
+            shadow-[0_18px_55px_rgba(79,61,73,0.05)]
+            backdrop-blur-xl
+            md:p-10
+            lg:p-12
+          "
+        >
+          <div
+            className="
+              grid
+              gap-8
+              lg:grid-cols-[0.8fr_1.2fr]
+              lg:gap-16
+            "
+          >
+            <div>
+              <p
+                className="
+                  text-sm
+                  uppercase
+                  tracking-[0.14em]
+                  text-[#7d707a]
+                "
+              >
+                What stuck with me
+              </p>
+            </div>
+
+            <div>
+              <h2
+                className="
+                  max-w-3xl
+                  text-3xl
+                  font-semibold
+                  leading-[1.05]
+                  tracking-[-0.045em]
+                  text-[#29232d]
+                  md:text-4xl
+                "
+              >
+                The project where things started feeling real.
+              </h2>
+
+              <p
+                className="
+                  mt-6
+                  max-w-3xl
+                  text-base
+                  leading-8
+                  text-[#7d707a]
+                "
+              >
+                Being responsible for the full implementation gave me a
+                much better understanding of what it takes to move from
+                a supplied design to a complete Webflow website. It
+                wasn&apos;t just about reproducing layouts — it was about
+                building them cleanly, making them responsive, and
+                thinking about how the whole site worked together.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* LIVE SITE */}
+        <section
+          className="
+            mt-16
+            flex
+            flex-col
+            gap-6
+            border-t
+            border-[#e9e3ea]
+            pt-10
+            md:flex-row
+            md:items-center
+            md:justify-between
+          "
+        >
+          <div>
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-[0.14em]
+                text-[#aaa0a8]
+              "
+            >
+              See it in the wild
+            </p>
+
+            <p
+              className="
+                mt-2
+                max-w-lg
+                text-sm
+                leading-6
+                text-[#7d707a]
+              "
+            >
+              Visit the public website to see the finished Webflow
+              implementation.
+            </p>
+          </div>
+
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group
+              inline-flex
+              items-center
+              gap-3
+              text-sm
+              font-medium
+              text-[#806fbd]
+              underline
+              decoration-[#cfc3ef]
+              decoration-2
+              underline-offset-4
+              transition-colors
+              duration-300
+              hover:text-[#d96c9b]
+              hover:decoration-[#efa6c1]
+            "
+          >
+            Visit live website
+
+            <ArrowUpRight
+              size={16}
+              className="
+                transition-transform
+                duration-300
+                group-hover:translate-x-0.5
+                group-hover:-translate-y-0.5
+              "
+            />
+          </a>
         </section>
       </Container>
     </main>

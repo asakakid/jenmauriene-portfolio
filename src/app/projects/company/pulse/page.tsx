@@ -1,50 +1,102 @@
 import Link from "next/link";
 import {
   ArrowLeft,
-  EyeOff,
+  ArrowUpRight,
+  Boxes,
+  ExternalLink,
   Layers3,
+  MoveHorizontal,
   ShoppingBag,
   Sparkles,
+  Waves,
 } from "lucide-react";
 
 import Container from "@/src/components/layout/Container";
-import Button from "@/src/components/ui/Button";
 
-export default function PulsePage() {
-  const highlights = [
-    "More advanced Rive interactions",
-    "Partner logo marquee",
-    "CMS-driven content",
-    "Stacking highlighted-work layout",
-    "Custom Shopify integration",
-    "Dedicated merch experience",
-  ];
+const liveUrl = "https://jorie.ai/";
 
-  const supportingWork = [
-    {
-      title: "Rive, round two",
-      description:
-        "Worked with more involved Rive interactions and got more comfortable treating animation as part of the interface rather than a decorative extra.",
-    },
-    {
-      title: "Partner marquee",
-      description:
-        "Built a continuously moving logo marquee for the partnership section while keeping the motion clean and secondary to the content.",
-    },
-    {
-      title: "CMS-driven content",
-      description:
-        "Used Webflow CMS for content that needed to stay manageable and reusable instead of hard-coding every entry into the page.",
-    },
-    {
-      title: "Stacking grid",
-      description:
-        "Built the highlighted-work section with a stacked visual treatment, giving CMS-driven content a more designed and interactive presentation.",
-    },
-  ];
+const projectDetails = [
+  {
+    label: "Role",
+    value: "Primary Webflow Developer",
+  },
+  {
+    label: "Project type",
+    value: "Professional Client Work",
+  },
+  {
+    label: "Completed through",
+    value: "Dorxata",
+  },
+  {
+    label: "Focus",
+    value: "Webflow · Rive · CMS · Shopify",
+  },
+];
 
+const technologies = [
+  "Webflow",
+  "Rive",
+  "Webflow CMS",
+  "Shopify",
+  "JavaScript",
+  "Custom Code",
+  "Responsive Development",
+];
+
+const highlights = [
+  {
+    icon: Waves,
+    title: "More advanced Rive interactions",
+    description:
+      "I implemented more involved Rive interactions throughout the Webflow build, becoming more comfortable using animation as an interactive part of the interface rather than a decorative layer.",
+  },
+  {
+    icon: MoveHorizontal,
+    title: "Partner logo marquee",
+    description:
+      "I implemented a continuously moving partner-logo marquee that added motion to the page while keeping the interaction secondary to the surrounding content.",
+  },
+  {
+    icon: Layers3,
+    title: "CMS-driven content",
+    description:
+      "I used Webflow CMS for reusable and maintainable content sections, allowing dynamic entries to live within the same visual system as the rest of the website.",
+  },
+  {
+    icon: Boxes,
+    title: "Stacked highlighted-work layout",
+    description:
+      "I built a more editorial presentation for highlighted CMS content, using an intentionally layered and stacked visual treatment instead of a conventional repeating grid.",
+  },
+];
+
+const supportingWork = [
+  {
+    title: "Responsive implementation",
+    description:
+      "I worked through the supplied layouts across breakpoints to make sure the interactive and content-heavy sections translated cleanly beyond desktop.",
+  },
+  {
+    title: "Custom Webflow behavior",
+    description:
+      "Where native Webflow functionality wasn't enough, I used custom code to support the required interactions and integrations while keeping the rest of the build manageable inside Webflow.",
+  },
+  {
+    title: "Motion throughout the site",
+    description:
+      "Beyond the larger Rive pieces, I worked on smaller transitions and movement across the experience so the interface felt cohesive rather than like a collection of isolated effects.",
+  },
+  {
+    title: "Integration work",
+    description:
+      "The project pushed me beyond a Webflow-only workflow and into connecting the site with an external commerce platform while preserving a consistent front-end experience.",
+  },
+];
+
+export default function JoriePage() {
   return (
-    <main className="pb-20 pt-28">
+    <main className="pb-24 pt-28 md:pt-32">
       <Container>
         {/* BACK */}
         <Link
@@ -71,7 +123,7 @@ export default function PulsePage() {
             "
           />
 
-          Back to company projects
+          Back to professional work
         </Link>
 
         {/* HERO */}
@@ -90,7 +142,7 @@ export default function PulsePage() {
             lg:p-14
           "
         >
-          {/* AMBIENT LIGHT */}
+          {/* AMBIENT GLOWS */}
           <div
             aria-hidden="true"
             className="
@@ -101,7 +153,7 @@ export default function PulsePage() {
               h-72
               w-72
               rounded-full
-              bg-[#b9a7ee]/12
+              bg-[#efa6c1]/12
               blur-[90px]
             "
           />
@@ -112,186 +164,179 @@ export default function PulsePage() {
               pointer-events-none
               absolute
               -bottom-24
-              left-0
+              left-[25%]
               h-72
               w-72
               rounded-full
-              bg-[#efa6c1]/10
+              bg-[#b9a7ee]/10
               blur-[90px]
             "
           />
 
-          <div
-            className="
-              relative
-              z-10
-              grid
-              gap-12
-              lg:grid-cols-[1.05fr_0.95fr]
-              lg:gap-16
-            "
-          >
-            {/* LEFT */}
-            <div>
+          <div className="relative z-10">
+            {/* EYEBROW */}
+            <div className="mb-6 flex flex-wrap items-center gap-3">
               <div
                 className="
-                  mb-5
-                  flex
-                  flex-wrap
+                  inline-flex
                   items-center
                   gap-2
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
+                  rounded-full
+                  border
+                  border-[#e3dbf4]
+                  bg-white/60
+                  px-3
+                  py-1.5
                 "
               >
-                <span>Company Project</span>
+                <Sparkles size={13} className="text-[#d96c9b]" />
 
                 <span
-                  aria-hidden="true"
                   className="
-                    h-1
-                    w-1
-                    rounded-full
-                    bg-[#cfc6ce]
+                    text-xs
+                    uppercase
+                    tracking-[0.14em]
+                    text-[#7d707a]
                   "
-                />
-
-                <span>Webflow Development</span>
+                >
+                  Professional Work
+                </span>
               </div>
 
-              <h1
-                className="
-                  max-w-3xl
-                  text-5xl
-                  font-semibold
-                  leading-[0.94]
-                  tracking-[-0.06em]
-                  text-[#29232d]
-                  md:text-7xl
-                "
-              >
-                Project Pulse
-              </h1>
+              <span className="text-xs text-[#aaa0a8]">
+                Webflow · Rive · CMS · Shopify
+              </span>
+            </div>
 
-              <p
-                className="
-                  mt-6
-                  max-w-2xl
-                  text-lg
-                  leading-8
-                  text-[#7d707a]
-                "
-              >
-                A healthcare-AI website where I worked with more
-                advanced Rive interactions, CMS-driven layouts, motion,
-                and a custom integration that brought the client&apos;s
-                Shopify store into the Webflow experience.
-              </p>
-
-              <div
-                className="
-                  mt-7
-                  flex
-                  max-w-xl
-                  items-start
-                  gap-3
-                  border-l
-                  border-[#d8cff4]
-                  pl-4
-                "
-              >
-                <EyeOff
-                  size={15}
+            {/* TITLE + DETAILS */}
+            <div
+              className="
+                grid
+                gap-10
+                lg:grid-cols-[1.2fr_0.8fr]
+                lg:items-end
+                lg:gap-16
+              "
+            >
+              <div>
+                <h1
                   className="
-                    mt-1
-                    shrink-0
-                    text-[#8f7ccf]
+                    max-w-4xl
+                    text-5xl
+                    font-semibold
+                    leading-[0.92]
+                    tracking-[-0.06em]
+                    text-[#29232d]
+                    md:text-7xl
                   "
-                />
+                >
+                  Jorie AI
+                </h1>
 
                 <p
                   className="
-                    text-sm
-                    leading-6
-                    text-[#8b7f89]
+                    mt-7
+                    max-w-2xl
+                    text-lg
+                    leading-8
+                    text-[#7d707a]
                   "
                 >
-                  Another alias joins the collection. The company name
-                  stays offstage; the things I built do not.
+                  A healthcare-AI website where I worked across Webflow
+                  development, interactive Rive assets, CMS-driven
+                  layouts, motion, and a custom Shopify integration for
+                  the brand&apos;s merch experience.
                 </p>
-              </div>
-            </div>
 
-            {/* BUILD NOTES */}
-            <div
-              className="
-                flex
-                items-center
-                justify-center
-              "
-            >
+                {/* LIVE SITE CTA */}
+                <a
+                  href={liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    group
+                    mt-8
+                    inline-flex
+                    items-center
+                    gap-3
+                    rounded-full
+                    bg-[#29232d]
+                    px-5
+                    py-3
+                    text-sm
+                    font-medium
+                    text-white
+                    transition-all
+                    duration-300
+                    hover:-translate-y-0.5
+                    hover:bg-[#806fbd]
+                    hover:shadow-[0_12px_30px_rgba(79,61,73,0.15)]
+                  "
+                >
+                  Visit live website
+
+                  <ExternalLink
+                    size={15}
+                    className="
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5
+                    "
+                  />
+                </a>
+              </div>
+
+              {/* PROJECT DETAILS */}
               <div
                 className="
-                  w-full
-                  max-w-sm
-                  rotate-[-1deg]
-                  rounded-[28px]
+                  rounded-[26px]
                   border
                   border-white/85
-                  bg-white/70
-                  p-7
-                  shadow-[0_20px_50px_rgba(79,61,73,0.07)]
+                  bg-white/62
+                  p-6
                   backdrop-blur-xl
                 "
               >
-                <Sparkles
-                  size={16}
-                  className="mb-4 text-[#b9a7ee]"
-                />
-
                 <p
                   className="
+                    mb-5
                     text-xs
+                    font-medium
                     uppercase
                     tracking-[0.14em]
                     text-[#9b8f99]
                   "
                 >
-                  Build notes
+                  Project details
                 </p>
 
-                <div className="mt-5 space-y-3">
-                  {highlights.map((item) => (
+                <div className="divide-y divide-[#ebe5ec]">
+                  {projectDetails.map((detail) => (
                     <div
-                      key={item}
+                      key={detail.label}
                       className="
-                        flex
-                        items-start
-                        gap-3
+                        grid
+                        grid-cols-[0.8fr_1.2fr]
+                        gap-4
+                        py-4
+                        first:pt-0
+                        last:pb-0
                       "
                     >
+                      <span className="text-sm text-[#aaa0a8]">
+                        {detail.label}
+                      </span>
+
                       <span
                         className="
-                          mt-2
-                          h-1.5
-                          w-1.5
-                          shrink-0
-                          rounded-full
-                          bg-[#efa6c1]
-                        "
-                      />
-
-                      <p
-                        className="
                           text-sm
-                          leading-6
+                          font-medium
                           text-[#5f5560]
                         "
                       >
-                        {item}
-                      </p>
+                        {detail.value}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -300,91 +345,91 @@ export default function PulsePage() {
           </div>
         </section>
 
-        {/* PROJECT CONTEXT */}
-        <section className="py-20 md:py-24">
-          <div
-            className="
-              grid
-              gap-10
-              lg:grid-cols-[0.72fr_1.28fr]
-              lg:gap-20
-            "
-          >
-            <div>
-              <p
-                className="
-                  mb-4
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
-                "
-              >
-                The project
-              </p>
+        {/* THE PROJECT */}
+        <section
+          className="
+            grid
+            gap-10
+            py-20
+            md:py-28
+            lg:grid-cols-[0.75fr_1.25fr]
+            lg:gap-20
+          "
+        >
+          <div>
+            <p
+              className="
+                text-sm
+                uppercase
+                tracking-[0.14em]
+                text-[#7d707a]
+              "
+            >
+              The project
+            </p>
+          </div>
 
-              <h2
-                className="
-                  max-w-md
-                  text-4xl
-                  font-semibold
-                  leading-[0.98]
-                  tracking-[-0.05em]
-                  text-[#29232d]
-                  md:text-5xl
-                "
-              >
-                Healthcare AI,
-                with a lot happening underneath.
-              </h2>
-            </div>
+          <div>
+            <h2
+              className="
+                max-w-3xl
+                text-4xl
+                font-semibold
+                leading-[1]
+                tracking-[-0.05em]
+                text-[#29232d]
+                md:text-5xl
+              "
+            >
+              Healthcare AI,
+              <br />
+              with a lot happening underneath.
+            </h2>
 
             <div
               className="
-                max-w-2xl
+                mt-8
+                max-w-3xl
                 space-y-5
-                leading-7
+                text-base
+                leading-8
                 text-[#7d707a]
               "
             >
               <p>
-                The website is for a healthcare AI platform focused on
-                automating operational workflows, so the site needed to
-                communicate a fairly technical product without feeling
-                overly dense.
+                Jorie AI is a healthcare technology platform focused on
+                using AI and automation across revenue-cycle operations,
+                including workflows such as eligibility, prior
+                authorization, claims, and payment processes.
               </p>
 
               <p>
-                My work was on the Webflow implementation and the pieces
-                around it: interactive Rive assets, CMS content,
-                motion, custom layouts, and functionality that needed
-                more than Webflow&apos;s native tools.
+                My role was focused on the Webflow implementation and the
+                interactive pieces around it. I worked with supplied
+                designs and assets, implementing the front-end experience
+                across Webflow, Rive, CMS-driven content, motion, and
+                custom integrations.
               </p>
 
-              <p
-                className="
-                  font-medium
-                  text-[#29232d]
-                "
-              >
-                And then there was the merch page.
+              <p>
+                The project was a good example of Webflow acting as the
+                foundation of a larger front-end system rather than the
+                only tool involved in the build.
               </p>
             </div>
           </div>
         </section>
 
-        {/* SHOPIFY HIGHLIGHT */}
+        {/* CONTRIBUTIONS */}
         <section
           className="
             relative
             overflow-hidden
             rounded-[32px]
             border
-            border-[#eadff0]
-            bg-white/52
+            border-[#e8e0f4]
+            bg-[#f7f3ff]/60
             p-7
-            shadow-[0_20px_60px_rgba(79,61,73,0.06)]
-            backdrop-blur-xl
             md:p-10
             lg:p-12
           "
@@ -394,131 +439,233 @@ export default function PulsePage() {
             className="
               pointer-events-none
               absolute
-              -right-24
-              -top-24
-              h-80
-              w-80
+              -right-16
+              -top-16
+              h-52
+              w-52
               rounded-full
-              bg-[#efa6c1]/12
-              blur-[100px]
+              bg-[#b9a7ee]/15
+              blur-[70px]
             "
           />
 
-          <div
-            className="
-              relative
-              z-10
-              grid
-              gap-12
-              lg:grid-cols-[0.9fr_1.1fr]
-              lg:gap-20
-            "
-          >
-            {/* LEFT */}
-            <div>
-              <div
-                className="
-                  mb-5
-                  flex
-                  items-center
-                  gap-2
-                "
-              >
-                <ShoppingBag
-                  size={16}
-                  className="text-[#d96c9b]"
-                />
-
+          <div className="relative z-10">
+            <div
+              className="
+                mb-10
+                grid
+                gap-6
+                lg:grid-cols-[0.8fr_1.2fr]
+              "
+            >
+              <div>
                 <p
                   className="
-                    text-sm
+                    text-xs
                     uppercase
                     tracking-[0.14em]
-                    text-[#7d707a]
+                    text-[#8f7ccf]
                   "
                 >
-                  The highlight
+                  My contribution
                 </p>
               </div>
 
               <h2
                 className="
-                  max-w-xl
-                  text-4xl
+                  max-w-3xl
+                  text-3xl
                   font-semibold
-                  leading-[0.96]
-                  tracking-[-0.05em]
+                  tracking-[-0.045em]
                   text-[#29232d]
-                  md:text-6xl
+                  md:text-4xl
                 "
               >
-                And then Webflow met Shopify.
+                More motion, more dynamic content, and more systems
+                working together.
               </h2>
-
-              <p
-                className="
-                  mt-6
-                  max-w-xl
-                  text-lg
-                  leading-8
-                  text-[#7d707a]
-                "
-              >
-                The client had a Shopify store. The website had a merch
-                page. Those two things needed to feel like they belonged
-                together.
-              </p>
             </div>
 
-            {/* RIGHT */}
-            <div
-              className="
-                flex
-                flex-col
-                justify-center
-              "
-            >
-              <div
-                className="
-                  space-y-5
-                  leading-7
-                  text-[#7d707a]
-                "
-              >
-                <p>
-                  Instead of treating the merch section as a completely
-                  separate experience, I used custom code to integrate
-                  the client&apos;s Shopify setup with the Webflow site.
-                </p>
+            <div className="grid gap-5 md:grid-cols-2">
+              {highlights.map((highlight) => {
+                const Icon = highlight.icon;
 
-                <p>
-                  That meant working outside the normal Webflow-only
-                  workflow and figuring out how the two systems could
-                  work together while keeping the experience visually
-                  connected to the rest of the website.
-                </p>
+                return (
+                  <div
+                    key={highlight.title}
+                    className="
+                      rounded-[28px]
+                      border
+                      border-white/80
+                      bg-white/55
+                      p-7
+                      shadow-[0_18px_50px_rgba(79,61,73,0.04)]
+                      backdrop-blur-xl
+                      md:p-8
+                    "
+                  >
+                    <div
+                      className="
+                        mb-6
+                        flex
+                        h-11
+                        w-11
+                        items-center
+                        justify-center
+                        rounded-full
+                        border
+                        border-[#eadff0]
+                        bg-white/70
+                        text-[#d96c9b]
+                      "
+                    >
+                      <Icon size={18} />
+                    </div>
 
-                <p
-                  className="
-                    font-medium
-                    text-[#29232d]
-                  "
-                >
-                  This was less “find the right Webflow element” and
-                  more “okay, these two systems need to talk now.”
-                </p>
-              </div>
+                    <h3
+                      className="
+                        text-xl
+                        font-semibold
+                        tracking-[-0.03em]
+                        text-[#29232d]
+                      "
+                    >
+                      {highlight.title}
+                    </h3>
+
+                    <p
+                      className="
+                        mt-3
+                        leading-7
+                        text-[#7d707a]
+                      "
+                    >
+                      {highlight.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
+        </section>
 
-          {/* WEBFLOW → SHOPIFY VISUAL */}
+        {/* SHOPIFY */}
+        <section
+          className="
+            grid
+            gap-10
+            py-20
+            md:py-28
+            lg:grid-cols-[0.8fr_1.2fr]
+            lg:gap-20
+          "
+        >
+          <div>
+            <div
+              className="
+                mb-5
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#d8cff4]
+                bg-white/60
+                text-[#806fbd]
+              "
+            >
+              <ShoppingBag size={18} />
+            </div>
+
+            <p
+              className="
+                text-sm
+                uppercase
+                tracking-[0.14em]
+                text-[#7d707a]
+              "
+            >
+              The highlight
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                max-w-3xl
+                text-3xl
+                font-semibold
+                tracking-[-0.045em]
+                text-[#29232d]
+                md:text-4xl
+              "
+            >
+              And then Webflow met Shopify.
+            </h2>
+
+            <div
+              className="
+                mt-6
+                max-w-3xl
+                space-y-5
+                text-base
+                leading-8
+                text-[#7d707a]
+              "
+            >
+              <p>
+                One of the more interesting parts of my work on Jorie was
+                the merch experience. The site was built in Webflow, while
+                the client already had its commerce infrastructure in
+                Shopify.
+              </p>
+
+              <p>
+                I used custom code to connect those pieces so the merch
+                experience could live inside the broader Webflow site
+                while still relying on Shopify for the commerce side.
+              </p>
+
+              <p>
+                That pushed me outside a Webflow-only workflow and into
+                thinking more carefully about how separate systems can be
+                presented as one cohesive front-end experience.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* WEBFLOW / SHOPIFY VISUAL */}
+        <section
+          className="
+            rounded-[30px]
+            border
+            border-white/80
+            bg-white/46
+            p-6
+            shadow-[0_18px_50px_rgba(79,61,73,0.05)]
+            backdrop-blur-xl
+            md:p-8
+          "
+        >
+          <p
+            className="
+              mb-6
+              text-xs
+              uppercase
+              tracking-[0.14em]
+              text-[#9b8f99]
+            "
+          >
+            Integration breakdown
+          </p>
+
           <div
             className="
-              relative
-              z-10
-              mt-12
               grid
-              gap-4
+              gap-5
               md:grid-cols-[1fr_auto_1fr]
               md:items-center
             "
@@ -563,8 +710,8 @@ export default function PulsePage() {
                   text-[#7d707a]
                 "
               >
-                Layout, styling, interaction, and the surrounding merch
-                experience.
+                Layout, styling, responsive behavior, interactions, and
+                the surrounding merch presentation.
               </p>
             </div>
 
@@ -611,7 +758,7 @@ export default function PulsePage() {
                   text-[#29232d]
                 "
               >
-                The commerce side
+                The commerce layer
               </p>
 
               <p
@@ -622,361 +769,198 @@ export default function PulsePage() {
                   text-[#7d707a]
                 "
               >
-                The client&apos;s existing store and product
-                infrastructure.
+                The existing product and commerce infrastructure behind
+                the merch experience.
               </p>
             </div>
           </div>
         </section>
 
         {/* RIVE */}
-        <section className="py-20 md:py-24">
-          <div
-            className="
-              grid
-              gap-12
-              lg:grid-cols-[0.8fr_1.2fr]
-              lg:gap-20
-            "
-          >
-            <div>
-              <p
-                className="
-                  mb-4
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
-                "
-              >
-                Rive, round two
-              </p>
-
-              <h2
-                className="
-                  max-w-lg
-                  text-4xl
-                  font-semibold
-                  leading-[0.98]
-                  tracking-[-0.05em]
-                  text-[#29232d]
-                  md:text-5xl
-                "
-              >
-                This time, the interactions got more involved.
-              </h2>
+        <section
+          className="
+            grid
+            gap-10
+            py-20
+            md:py-28
+            lg:grid-cols-[0.8fr_1.2fr]
+            lg:gap-20
+          "
+        >
+          <div>
+            <div
+              className="
+                mb-5
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#d8cff4]
+                bg-white/60
+                text-[#806fbd]
+              "
+            >
+              <Waves size={18} />
             </div>
+
+            <p
+              className="
+                text-sm
+                uppercase
+                tracking-[0.14em]
+                text-[#7d707a]
+              "
+            >
+              Rive, round two
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                max-w-3xl
+                text-3xl
+                font-semibold
+                tracking-[-0.045em]
+                text-[#29232d]
+                md:text-4xl
+              "
+            >
+              This time, the interactions got more involved.
+            </h2>
 
             <div
               className="
-                max-w-2xl
+                mt-6
+                max-w-3xl
                 space-y-5
-                leading-7
+                text-base
+                leading-8
                 text-[#7d707a]
               "
             >
               <p>
-                I&apos;d already worked with Rive before this project,
-                but here the interactions were more complex.
+                I&apos;d already worked with Rive on previous Webflow
+                builds, but Jorie gave me more experience working with
+                richer interactions and integrating them into the page
+                experience.
               </p>
 
               <p>
-                By this point, I was getting more comfortable working
-                with Rive inside Webflow and thinking about the
-                animations as functional pieces of the interface rather
-                than something that simply plays on the page.
-              </p>
-
-              <p
-                className="
-                  font-medium
-                  text-[#29232d]
-                "
-              >
-                Less “how do I put this in Webflow?” and more “how
-                should this actually behave?”
+                By this point, I was thinking less about simply embedding
+                an animation and more about how it should behave within
+                the surrounding interface.
               </p>
             </div>
           </div>
         </section>
 
-        {/* CMS + MASONRY GRID */}
-<section
-  className="
-    border-y
-    border-[#e9e3ea]
-    py-16
-    md:py-20
-  "
->
-  <div
-    className="
-      grid
-      gap-12
-      lg:grid-cols-[0.75fr_1.25fr]
-      lg:gap-20
-    "
-  >
-    {/* LEFT COPY */}
-    <div>
-      <div
-        className="
-          mb-5
-          flex
-          items-center
-          gap-2
-        "
-      >
-        <Layers3
-          size={16}
-          className="text-[#806fbd]"
-        />
-
-        <p
+        {/* CMS */}
+        <section
           className="
-            text-sm
-            uppercase
-            tracking-[0.14em]
-            text-[#7d707a]
+            grid
+            gap-10
+            border-y
+            border-[#e9e3ea]
+            py-20
+            md:py-28
+            lg:grid-cols-[0.8fr_1.2fr]
+            lg:gap-20
           "
         >
-          CMS + layout
-        </p>
-      </div>
+          <div>
+            <div
+              className="
+                mb-5
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#d8cff4]
+                bg-white/60
+                text-[#806fbd]
+              "
+            >
+              <Layers3 size={18} />
+            </div>
 
-      <h2
-        className="
-          max-w-lg
-          text-4xl
-          font-semibold
-          leading-[0.98]
-          tracking-[-0.05em]
-          text-[#29232d]
-          md:text-5xl
-        "
-      >
-        CMS, but make it editorial.
-      </h2>
-
-      <div
-        className="
-          mt-6
-          max-w-lg
-          space-y-5
-          leading-7
-          text-[#7d707a]
-        "
-      >
-        <p>
-          The highlighted work section was CMS-driven, but I didn&apos;t
-          want it to read like a normal repeating grid.
-        </p>
-
-        <p>
-          I built it with mixed image heights, overlay text, and an
-          intentionally uneven rhythm so the content feels more like a
-          curated gallery wall than a standard collection list.
-        </p>
-
-        <p
-          className="
-            font-medium
-            text-[#29232d]
-          "
-        >
-          Structured underneath. A little chaotic on purpose on top.
-        </p>
-      </div>
-    </div>
-
-    {/* MASONRY-STYLE VISUAL */}
-    <div
-      className="
-        grid
-        grid-cols-2
-        gap-3
-        md:grid-cols-3
-      "
-    >
-      {/* COLUMN 1 */}
-      <div className="space-y-3">
-        <div
-          className="
-            relative
-            min-h-[260px]
-            overflow-hidden
-            rounded-[22px]
-            bg-[#eee8f5]
-          "
-        >
-          <div
-            className="
-              absolute
-              inset-x-0
-              bottom-0
-              bg-gradient-to-t
-              from-[#29232d]/70
-              to-transparent
-              p-4
-            "
-          >
-            <p className="text-sm text-white">
-              Highlighted work
+            <p
+              className="
+                text-sm
+                uppercase
+                tracking-[0.14em]
+                text-[#7d707a]
+              "
+            >
+              CMS + layout
             </p>
           </div>
-        </div>
 
-        <div
-          className="
-            relative
-            min-h-[180px]
-            overflow-hidden
-            rounded-[22px]
-            bg-[#f7edf2]
-          "
-        >
-          <div
-            className="
-              absolute
-              inset-x-0
-              bottom-0
-              bg-gradient-to-t
-              from-[#29232d]/65
-              to-transparent
-              p-4
-            "
-          >
-            <p className="text-sm text-white">
-              CMS item
-            </p>
+          <div>
+            <h2
+              className="
+                max-w-3xl
+                text-3xl
+                font-semibold
+                tracking-[-0.045em]
+                text-[#29232d]
+                md:text-4xl
+              "
+            >
+              Dynamic content without making it look repetitive.
+            </h2>
+
+            <div
+              className="
+                mt-6
+                max-w-3xl
+                space-y-5
+                text-base
+                leading-8
+                text-[#7d707a]
+              "
+            >
+              <p>
+                I used Webflow CMS for sections that needed to remain
+                manageable and reusable, including highlighted content
+                that could be updated without rebuilding the surrounding
+                page.
+              </p>
+
+              <p>
+                For the highlighted-work presentation, I implemented a
+                more stacked and editorial visual treatment rather than
+                letting the CMS output read as a conventional repeating
+                grid.
+              </p>
+
+              <p>
+                That gave me more experience separating the underlying
+                content structure from the way that content is presented
+                visually.
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      {/* COLUMN 2 */}
-      <div className="space-y-3">
-        <div
-          className="
-            relative
-            min-h-[190px]
-            overflow-hidden
-            rounded-[22px]
-            bg-[#edf3f7]
-          "
-        >
+        {/* SUPPORTING WORK */}
+        <section className="py-20 md:py-28">
           <div
             className="
-              absolute
-              inset-x-0
-              bottom-0
-              bg-gradient-to-t
-              from-[#29232d]/65
-              to-transparent
-              p-4
-            "
-          >
-            <p className="text-sm text-white">
-              Story
-            </p>
-          </div>
-        </div>
-
-        <div
-          className="
-            relative
-            min-h-[250px]
-            overflow-hidden
-            rounded-[22px]
-            bg-[#f3ede8]
-          "
-        >
-          <div
-            className="
-              absolute
-              inset-x-0
-              bottom-0
-              bg-gradient-to-t
-              from-[#29232d]/70
-              to-transparent
-              p-4
-            "
-          >
-            <p className="text-sm text-white">
-              Another highlight
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* COLUMN 3 */}
-      <div className="hidden space-y-3 md:block">
-        <div
-          className="
-            relative
-            min-h-[280px]
-            overflow-hidden
-            rounded-[22px]
-            bg-[#efeaf7]
-          "
-        >
-          <div
-            className="
-              absolute
-              inset-x-0
-              bottom-0
-              bg-gradient-to-t
-              from-[#29232d]/70
-              to-transparent
-              p-4
-            "
-          >
-            <p className="text-sm text-white">
-              Feature
-            </p>
-          </div>
-        </div>
-
-        <div
-          className="
-            relative
-            min-h-[160px]
-            overflow-hidden
-            rounded-[22px]
-            bg-[#f8eef3]
-          "
-        >
-          <div
-            className="
-              absolute
-              inset-x-0
-              bottom-0
-              bg-gradient-to-t
-              from-[#29232d]/65
-              to-transparent
-              p-4
-            "
-          >
-            <p className="text-sm text-white">
-              CMS item
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-        {/* OTHER DETAILS */}
-        <section className="py-20 md:py-24">
-          <div
-            className="
-              mb-12
-              max-w-2xl
+              mb-10
+              grid
+              gap-6
+              lg:grid-cols-[0.8fr_1.2fr]
             "
           >
             <p
               className="
-                mb-4
                 text-sm
                 uppercase
                 tracking-[0.14em]
@@ -988,38 +972,37 @@ export default function PulsePage() {
 
             <h2
               className="
+                max-w-3xl
                 text-4xl
                 font-semibold
-                leading-[0.98]
+                leading-[1]
                 tracking-[-0.05em]
                 text-[#29232d]
                 md:text-5xl
               "
             >
-              Not everything needed to be the main character.
+              A lot of smaller pieces still had to work together.
             </h2>
           </div>
 
-          <div
-            className="
-              grid
-              gap-x-10
-              gap-y-8
-              md:grid-cols-2
-            "
-          >
+          <div className="grid gap-5 md:grid-cols-2">
             {supportingWork.map((item) => (
               <div
                 key={item.title}
                 className="
-                  border-t
-                  border-[#ddd6df]
-                  pt-5
+                  rounded-[28px]
+                  border
+                  border-white/80
+                  bg-white/50
+                  p-7
+                  shadow-[0_18px_50px_rgba(79,61,73,0.04)]
+                  backdrop-blur-xl
+                  md:p-8
                 "
               >
                 <h3
                   className="
-                    text-lg
+                    text-xl
                     font-semibold
                     tracking-[-0.03em]
                     text-[#29232d]
@@ -1030,9 +1013,8 @@ export default function PulsePage() {
 
                 <p
                   className="
-                    mt-2
-                    text-sm
-                    leading-6
+                    mt-3
+                    leading-7
                     text-[#7d707a]
                   "
                 >
@@ -1043,152 +1025,217 @@ export default function PulsePage() {
           </div>
         </section>
 
-        {/* WHAT I LEARNED */}
+        {/* TECH */}
         <section
           className="
             border-t
             border-[#e9e3ea]
-            py-20
-            md:py-24
-          "
-        >
-          <div
-            className="
-              grid
-              gap-10
-              lg:grid-cols-[0.8fr_1.2fr]
-              lg:gap-20
-            "
-          >
-            <div>
-              <p
-                className="
-                  mb-4
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
-                "
-              >
-                What I took from it
-              </p>
-
-              <h2
-                className="
-                  max-w-lg
-                  text-4xl
-                  font-semibold
-                  leading-[0.98]
-                  tracking-[-0.05em]
-                  text-[#29232d]
-                  md:text-5xl
-                "
-              >
-                Sometimes the website is only one piece of the system.
-              </h2>
-            </div>
-
-            <div
-              className="
-                max-w-2xl
-                space-y-5
-                leading-7
-                text-[#7d707a]
-              "
-            >
-              <p>
-                This project pushed me further into thinking beyond the
-                Webflow canvas itself.
-              </p>
-
-              <p>
-                Between more involved Rive interactions, CMS-driven
-                layouts, and connecting Shopify through custom code, I
-                was working with several different pieces that still had
-                to feel like one website to the person using it.
-              </p>
-
-              <p
-                className="
-                  font-medium
-                  text-[#29232d]
-                "
-              >
-                Webflow was still home base. It just had neighbors now.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* CLOSING */}
-        <section
-          className="
-            rounded-[30px]
-            border
-            border-white/80
-            bg-white/48
-            px-7
-            py-10
-            shadow-[0_20px_60px_rgba(79,61,73,0.06)]
-            backdrop-blur-xl
-            md:px-10
-            md:py-12
+            py-16
+            md:py-20
           "
         >
           <div
             className="
               flex
               flex-col
-              gap-7
+              gap-6
               md:flex-row
-              md:items-end
+              md:items-center
               md:justify-between
             "
           >
             <div>
               <p
                 className="
-                  mb-3
                   text-xs
                   uppercase
                   tracking-[0.14em]
-                  text-[#9b8f99]
+                  text-[#aaa0a8]
                 "
               >
-                End note
+                Tools & technologies
               </p>
 
               <h2
                 className="
-                  max-w-2xl
-                  text-3xl
+                  mt-2
+                  text-2xl
                   font-semibold
-                  leading-[1]
-                  tracking-[-0.045em]
+                  tracking-[-0.035em]
                   text-[#29232d]
-                  md:text-5xl
                 "
               >
-                Webflow + Rive + CMS + Shopify.
-                <br />
-                Somehow, everyone got along.
+                What I worked with
               </h2>
             </div>
 
-            <Button
-              href="/#contact"
-              variant="secondary"
-              showArrow={false}
+            <div className="flex max-w-2xl flex-wrap gap-2">
+              {technologies.map((technology) => (
+                <span
+                  key={technology}
+                  className="
+                    rounded-full
+                    border
+                    border-white
+                    bg-white/60
+                    px-4
+                    py-2
+                    text-sm
+                    text-[#7d707a]
+                  "
+                >
+                  {technology}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* TAKEAWAY */}
+        <section
+          className="
+            rounded-[32px]
+            border
+            border-white/80
+            bg-white/50
+            p-7
+            shadow-[0_18px_55px_rgba(79,61,73,0.05)]
+            backdrop-blur-xl
+            md:p-10
+            lg:p-12
+          "
+        >
+          <div
+            className="
+              grid
+              gap-8
+              lg:grid-cols-[0.8fr_1.2fr]
+              lg:gap-16
+            "
+          >
+            <div>
+              <p
+                className="
+                  text-sm
+                  uppercase
+                  tracking-[0.14em]
+                  text-[#7d707a]
+                "
+              >
+                What stuck with me
+              </p>
+            </div>
+
+            <div>
+              <h2
+                className="
+                  max-w-3xl
+                  text-3xl
+                  font-semibold
+                  leading-[1.05]
+                  tracking-[-0.045em]
+                  text-[#29232d]
+                  md:text-4xl
+                "
+              >
+                Sometimes Webflow is only one piece of the system.
+              </h2>
+
+              <p
+                className="
+                  mt-6
+                  max-w-3xl
+                  text-base
+                  leading-8
+                  text-[#7d707a]
+                "
+              >
+                Jorie pushed me further into combining Webflow with other
+                tools rather than treating it as a closed environment.
+                Between Rive, CMS-driven layouts, motion, custom code, and
+                the Shopify integration, several different pieces still
+                had to feel like one cohesive website to the person using
+                it.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* LIVE SITE */}
+        <section
+          className="
+            mt-16
+            flex
+            flex-col
+            gap-6
+            border-t
+            border-[#e9e3ea]
+            pt-10
+            md:flex-row
+            md:items-center
+            md:justify-between
+          "
+        >
+          <div>
+            <p
               className="
-                w-fit
-                shrink-0
-                px-6
-                py-3
+                text-xs
+                uppercase
+                tracking-[0.14em]
+                text-[#aaa0a8]
               "
             >
-              Work with me
-            </Button>
+              See it in the wild
+            </p>
+
+            <p
+              className="
+                mt-2
+                max-w-lg
+                text-sm
+                leading-6
+                text-[#7d707a]
+              "
+            >
+              Visit the public Jorie AI website to explore the finished
+              Webflow experience.
+            </p>
           </div>
+
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group
+              inline-flex
+              items-center
+              gap-3
+              text-sm
+              font-medium
+              text-[#806fbd]
+              underline
+              decoration-[#cfc3ef]
+              decoration-2
+              underline-offset-4
+              transition-colors
+              duration-300
+              hover:text-[#d96c9b]
+              hover:decoration-[#efa6c1]
+            "
+          >
+            Visit Jorie AI
+
+            <ArrowUpRight
+              size={16}
+              className="
+                transition-transform
+                duration-300
+                group-hover:translate-x-0.5
+                group-hover:-translate-y-0.5
+              "
+            />
+          </a>
         </section>
       </Container>
     </main>

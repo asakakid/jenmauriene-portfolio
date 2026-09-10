@@ -289,7 +289,7 @@ export default function Contact() {
                     text-[#29232d]
                   "
                 >
-                  Tell me the rough version.
+                  Tell me what you have in mind.
                 </p>
               </div>
 

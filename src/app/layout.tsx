@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jen Mauriene — Webflow Developer & Creative Technologist",
+  title: "Jen Mauriene — Web Developer & Creative Technologist",
   description:
     "Webflow developer, creative technologist, and occasional AI accomplice. I build thoughtful websites with Webflow, code, and AI, whatever gets the job done beautifully.",
 };

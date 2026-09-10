@@ -1,5 +1,5 @@
 import northstarImage from "@/src/app/projects/company/northstar/northstar.webp";
-import sideprojimg from"@/src/app/projects/company/side-projects.webp";
+import sideprojimg from "@/src/app/projects/company/side-projects.webp";
 import experimentsimg from "@/src/app/projects/company/experiments.webp";
 import { StaticImageData } from "next/dist/shared/lib/image-external";
 
@@ -16,10 +16,10 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Company Projects",
-    category: "Webflow · Client Work",
+    title: "Client Projects",
+    category: "Webflow · Professional Work",
     description:
-      "A collection of company builds, fixes, and late-night feedback rounds — with the client names politely wearing disguises.",
+      "A selection of client websites I worked on as the primary Webflow developer, focused on responsive implementation, interactions, CMS, and production-ready builds.",
     image: northstarImage,
     technologies: [
       "Webflow",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     title: "Side Projects",
     category: "Automation · Experiments",
     description:
-      "Things I built because I thought, “there has to be a faster way.” Including a scraper that started as a work problem.",
+      "Personal tools and experiments I built while exploring faster workflows, automation, AI, and practical ways to solve repetitive problems.",
     image: sideprojimg,
     technologies: [
       "Python",
@@ -47,9 +47,9 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Portfolio & Experiments",
-    category: "Next.js · Vibe Coding",
+    category: "Next.js · AI-Assisted Development",
     description:
-      "Personal builds, front-end experiments, and places where I let myself poke at code until something interesting happens.",
+      "Personal builds, front-end experiments, and small projects where I explore new tools, patterns, and AI-assisted development workflows.",
     image: experimentsimg,
     technologies: [
       "Next.js",
@@ -71,25 +71,25 @@ export const skills: Skill[] = [
     name: "Webflow Development",
     level: 90,
     description:
-      "Responsive builds, CMS structure, reusable components, animations, and production-ready implementation.",
+      "Responsive builds, CMS structure, reusable components, interactions, and production-ready Webflow implementation.",
   },
   {
     name: "Responsive Front-End",
     level: 82,
     description:
-      "Layouts that adapt properly across desktop, tablet, and mobile without sacrificing hierarchy.",
+      "Building layouts that adapt cleanly across desktop, tablet, and mobile while preserving the intended design hierarchy.",
   },
   {
     name: "Figma to Web",
     level: 85,
     description:
-      "Translating designs into clean, structured, and responsive websites.",
+      "Translating provided designs into structured, responsive, and functional web experiences.",
   },
   {
     name: "AI-Assisted Development",
     level: 72,
     description:
-      "Using AI tools to prototype, debug, iterate, and build front-end experiences faster.",
+      "Using AI tools to prototype, debug, iterate, and explore front-end development workflows more efficiently.",
   },
 ];
 
@@ -109,7 +109,7 @@ export const tools: Tool[] = [
     category: "Development",
     status: "Core",
     description:
-      "Primary visual development platform for responsive and scalable website builds.",
+      "Primary visual development platform for responsive and scalable website implementation.",
     order: 1,
   },
   {
@@ -118,7 +118,7 @@ export const tools: Tool[] = [
     category: "Design",
     status: "In use",
     description:
-      "Used for layout planning, design handoff, and interface structure.",
+      "Used for design handoff, reviewing layouts, understanding component systems, and translating interfaces into development.",
     order: 2,
   },
   {
@@ -127,7 +127,7 @@ export const tools: Tool[] = [
     category: "Development",
     status: "Learning",
     description:
-      "Used for front-end experiments, portfolio builds, and AI-assisted coding workflows.",
+      "Used for front-end experiments, personal projects, and AI-assisted coding workflows.",
     order: 3,
   },
   {
@@ -145,7 +145,7 @@ export const tools: Tool[] = [
     category: "Development",
     status: "In use",
     description:
-      "Used for fast, consistent styling and responsive implementation.",
+      "Used for fast, consistent styling and responsive front-end implementation.",
     order: 5,
   },
   {

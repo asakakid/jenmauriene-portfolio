@@ -32,7 +32,7 @@ export default function Footer() {
                   text-[#29232d]
                 "
               >
-                AURI
+                jenmauriene
                 <span className="text-[#d96c9b]">.</span>
               </p>
 
@@ -45,8 +45,8 @@ export default function Footer() {
                   text-[#7d707a]
                 "
               >
-                Built with Webflow brain, code curiosity,
-                and a suspicious amount of attention to detail.
+                Web developer with a thing for clean builds, thoughtful interactions, 
+                and getting the little details right.
               </p>
 
               <div
@@ -162,11 +162,11 @@ export default function Footer() {
             "
           >
             <p>
-              © {new Date().getFullYear()} Auri.
+              © {new Date().getFullYear()} jenmauriene.
             </p>
 
             <p>
-              Webflow Developer · AI-Assisted Builder
+              Webflow Developer · Front-End Development
             </p>
           </div>
         </div>

@@ -1,29 +1,111 @@
 import Link from "next/link";
 import {
   ArrowLeft,
-  EyeOff,
+  ArrowUpRight,
+  Braces,
+  ExternalLink,
+  Gauge,
+  Layers3,
+  MonitorPlay,
+  MousePointer2,
   Play,
   Sparkles,
   Volume2,
+  Waves,
 } from "lucide-react";
 
 import Container from "@/src/components/layout/Container";
-import Button from "@/src/components/ui/Button";
 
-export default function RelayPage() {
-  const highlights = [
-    "Rive animations inside Webflow",
-    "Lenis smooth scrolling",
-    "Finsweet CMS utilities",
-    "Custom video tab controls",
-    "Swiper.js draggable interactions",
-    "Animated number scaling",
-    "Scroll-based text reveals",
-    "Custom CSS inverted corners",
-  ];
+const liveUrl =
+  "https://spalk-a40d25-a9683ab85bbea240fee5db36d5.webflow.io/";
 
+const projectDetails = [
+  {
+    label: "Role",
+    value: "Primary Webflow Developer",
+  },
+  {
+    label: "Project type",
+    value: "Professional Client Work",
+  },
+  {
+    label: "Completed through",
+    value: "Dorxata",
+  },
+  {
+    label: "Focus",
+    value: "Webflow · Interactions · Custom Code",
+  },
+];
+
+const technologies = [
+  "Webflow",
+  "Rive",
+  "Lenis",
+  "Finsweet",
+  "Webflow CMS",
+  "Swiper.js",
+  "JavaScript",
+  "Custom CSS",
+];
+
+const highlights = [
+  {
+    icon: Waves,
+    title: "Rive inside Webflow",
+    description:
+      "I implemented interactive Rive assets throughout the build and became much more comfortable integrating animation as part of the interface rather than treating it as a separate visual layer.",
+  },
+  {
+    icon: MousePointer2,
+    title: "Lenis smooth scrolling",
+    description:
+      "I introduced Lenis smooth scrolling to give the site a more controlled sense of movement and carried that experience into later Webflow projects.",
+  },
+  {
+    icon: Layers3,
+    title: "CMS + Finsweet",
+    description:
+      "I worked with Webflow CMS and Finsweet utilities to support reusable content and extend sections that needed more flexibility than a basic Collection List.",
+  },
+  {
+    icon: MonitorPlay,
+    title: "Custom video tabs",
+    description:
+      "I extended native Webflow tabs with custom JavaScript so each tab could contain its own video with user-controlled playback and audio behavior.",
+  },
+];
+
+const supportingWork = [
+  {
+    icon: Gauge,
+    title: "Animated number scaling",
+    description:
+      "I implemented an animated numerical interaction for site statistics, adding movement to figures that would otherwise remain static.",
+  },
+  {
+    icon: Braces,
+    title: "Custom CSS details",
+    description:
+      "Some of the supplied visual treatments required custom CSS beyond standard Webflow controls, including the inverted and cut-out corner treatments used in the layouts.",
+  },
+  {
+    icon: Play,
+    title: "Swiper.js interactions",
+    description:
+      "I incorporated Swiper.js where the design called for draggable or swipeable behavior that went beyond what I wanted to handle with native Webflow interactions alone.",
+  },
+  {
+    icon: Sparkles,
+    title: "Scroll-based motion",
+    description:
+      "I implemented smaller scroll-triggered reveals and transitions throughout the site, keeping motion present without making every section compete for attention.",
+  },
+];
+
+export default function SpalkPage() {
   return (
-    <main className="pb-20 pt-28">
+    <main className="pb-24 pt-28 md:pt-32">
       <Container>
         {/* BACK */}
         <Link
@@ -50,7 +132,7 @@ export default function RelayPage() {
             "
           />
 
-          Back to company projects
+          Back to professional work
         </Link>
 
         {/* HERO */}
@@ -79,7 +161,7 @@ export default function RelayPage() {
               h-72
               w-72
               rounded-full
-              bg-[#b9a7ee]/12
+              bg-[#efa6c1]/12
               blur-[90px]
             "
           />
@@ -90,199 +172,179 @@ export default function RelayPage() {
               pointer-events-none
               absolute
               -bottom-24
-              left-0
+              left-[25%]
               h-72
               w-72
               rounded-full
-              bg-[#efa6c1]/8
+              bg-[#b9a7ee]/10
               blur-[90px]
             "
           />
 
-          <div
-            className="
-              relative
-              z-10
-              grid
-              gap-12
-              lg:grid-cols-[1.05fr_0.95fr]
-              lg:gap-16
-            "
-          >
-            {/* LEFT */}
-            <div>
+          <div className="relative z-10">
+            {/* EYEBROW */}
+            <div className="mb-6 flex flex-wrap items-center gap-3">
               <div
                 className="
-                  mb-5
-                  flex
-                  flex-wrap
+                  inline-flex
                   items-center
                   gap-2
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
+                  rounded-full
+                  border
+                  border-[#e3dbf4]
+                  bg-white/60
+                  px-3
+                  py-1.5
                 "
               >
-                <span>Company Project</span>
+                <Sparkles size={13} className="text-[#d96c9b]" />
 
                 <span
-                  aria-hidden="true"
                   className="
-                    h-1
-                    w-1
-                    rounded-full
-                    bg-[#cfc6ce]
+                    text-xs
+                    uppercase
+                    tracking-[0.14em]
+                    text-[#7d707a]
                   "
-                />
-
-                <span>Webflow Development</span>
+                >
+                  Professional Work
+                </span>
               </div>
 
-              <h1
-                className="
-                  max-w-3xl
-                  text-5xl
-                  font-semibold
-                  leading-[0.94]
-                  tracking-[-0.06em]
-                  text-[#29232d]
-                  md:text-7xl
-                "
-              >
-                Project Relay
-              </h1>
+              <span className="text-xs text-[#aaa0a8]">
+                Webflow · Interactions · Custom Code
+              </span>
+            </div>
 
-              <p
-                className="
-                  mt-6
-                  max-w-2xl
-                  text-lg
-                  leading-8
-                  text-[#7d707a]
-                "
-              >
-                A sports-tech website where I got to go much deeper
-                into Webflow interactions, custom code, animation tools,
-                and third-party libraries.
-              </p>
-
-              <p
-                className="
-                  mt-4
-                  max-w-2xl
-                  leading-7
-                  text-[#7d707a]
-                "
-              >
-                The site itself supports a sports broadcasting platform,
-                so the build had a lot more motion, media, and interactive
-                behavior than a typical static marketing site.
-              </p>
-
-              {/* CONFIDENTIALITY NOTE */}
-              <div
-                className="
-                  mt-7
-                  flex
-                  max-w-xl
-                  items-start
-                  gap-3
-                  border-l
-                  border-[#d8cff4]
-                  pl-4
-                "
-              >
-                <EyeOff
-                  size={15}
+            {/* TITLE + DETAILS */}
+            <div
+              className="
+                grid
+                gap-10
+                lg:grid-cols-[1.2fr_0.8fr]
+                lg:items-end
+                lg:gap-16
+              "
+            >
+              <div>
+                <h1
                   className="
-                    mt-1
-                    shrink-0
-                    text-[#8f7ccf]
+                    max-w-4xl
+                    text-5xl
+                    font-semibold
+                    leading-[0.92]
+                    tracking-[-0.06em]
+                    text-[#29232d]
+                    md:text-7xl
                   "
-                />
+                >
+                  Spalk
+                </h1>
 
                 <p
                   className="
-                    text-sm
-                    leading-6
-                    text-[#8b7f89]
+                    mt-7
+                    max-w-2xl
+                    text-lg
+                    leading-8
+                    text-[#7d707a]
                   "
                 >
-                  Alias again. Same deal: real work, fake name, very real
-                  amount of time spent making interactions behave. :)
+                  A sports-tech website where I pushed further beyond
+                  standard Webflow development — working with Rive,
+                  Lenis, CMS utilities, Swiper.js, custom JavaScript,
+                  custom CSS, and interaction-heavy front-end behavior.
                 </p>
-              </div>
-            </div>
 
-            {/* RIGHT NOTES */}
-            <div
-              className="
-                flex
-                items-center
-                justify-center
-              "
-            >
+                {/* LIVE SITE CTA */}
+                <a
+                  href={liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    group
+                    mt-8
+                    inline-flex
+                    items-center
+                    gap-3
+                    rounded-full
+                    bg-[#29232d]
+                    px-5
+                    py-3
+                    text-sm
+                    font-medium
+                    text-white
+                    transition-all
+                    duration-300
+                    hover:-translate-y-0.5
+                    hover:bg-[#806fbd]
+                    hover:shadow-[0_12px_30px_rgba(79,61,73,0.15)]
+                  "
+                >
+                  Visit live website
+
+                  <ExternalLink
+                    size={15}
+                    className="
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5
+                    "
+                  />
+                </a>
+              </div>
+
+              {/* PROJECT DETAILS */}
               <div
                 className="
-                  w-full
-                  max-w-sm
-                  rotate-[1deg]
-                  rounded-[28px]
+                  rounded-[26px]
                   border
                   border-white/85
-                  bg-white/70
-                  p-7
-                  shadow-[0_20px_50px_rgba(79,61,73,0.07)]
+                  bg-white/62
+                  p-6
                   backdrop-blur-xl
                 "
               >
-                <Sparkles
-                  size={16}
-                  className="mb-4 text-[#b9a7ee]"
-                />
-
                 <p
                   className="
+                    mb-5
                     text-xs
+                    font-medium
                     uppercase
                     tracking-[0.14em]
                     text-[#9b8f99]
                   "
                 >
-                  Build notes
+                  Project details
                 </p>
 
-                <div className="mt-5 space-y-3">
-                  {highlights.map((item) => (
+                <div className="divide-y divide-[#ebe5ec]">
+                  {projectDetails.map((detail) => (
                     <div
-                      key={item}
+                      key={detail.label}
                       className="
-                        flex
-                        items-start
-                        gap-3
+                        grid
+                        grid-cols-[0.8fr_1.2fr]
+                        gap-4
+                        py-4
+                        first:pt-0
+                        last:pb-0
                       "
                     >
+                      <span className="text-sm text-[#aaa0a8]">
+                        {detail.label}
+                      </span>
+
                       <span
                         className="
-                          mt-2
-                          h-1.5
-                          w-1.5
-                          shrink-0
-                          rounded-full
-                          bg-[#efa6c1]
-                        "
-                      />
-
-                      <p
-                        className="
                           text-sm
-                          leading-6
+                          font-medium
                           text-[#5f5560]
                         "
                       >
-                        {item}
-                      </p>
+                        {detail.value}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -291,305 +353,336 @@ export default function RelayPage() {
           </div>
         </section>
 
-        {/* WHY THIS ONE MATTERED */}
-        <section className="py-20 md:py-24">
-          <div
-            className="
-              grid
-              gap-10
-              lg:grid-cols-[0.72fr_1.28fr]
-              lg:gap-20
-            "
-          >
-            <div>
-              <p
-                className="
-                  mb-4
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
-                "
-              >
-                Why this one mattered
-              </p>
+        {/* PROJECT */}
+        <section
+          className="
+            grid
+            gap-10
+            py-20
+            md:py-28
+            lg:grid-cols-[0.75fr_1.25fr]
+            lg:gap-20
+          "
+        >
+          <div>
+            <p
+              className="
+                text-sm
+                uppercase
+                tracking-[0.14em]
+                text-[#7d707a]
+              "
+            >
+              The project
+            </p>
+          </div>
 
-              <h2
-                className="
-                  max-w-md
-                  text-4xl
-                  font-semibold
-                  leading-[0.98]
-                  tracking-[-0.05em]
-                  text-[#29232d]
-                  md:text-5xl
-                "
-              >
-                Webflow started feeling like a playground.
-              </h2>
-            </div>
+          <div>
+            <h2
+              className="
+                max-w-3xl
+                text-4xl
+                font-semibold
+                leading-[1]
+                tracking-[-0.05em]
+                text-[#29232d]
+                md:text-5xl
+              "
+            >
+              Sports broadcasting,
+              <br />
+              built with a lot of moving parts.
+            </h2>
 
             <div
               className="
-                max-w-2xl
+                mt-8
+                max-w-3xl
                 space-y-5
-                leading-7
+                text-base
+                leading-8
                 text-[#7d707a]
               "
             >
               <p>
-                This was one of the projects where I stopped thinking of
-                Webflow as only a visual development tool and started
-                getting much more comfortable extending it.
+                Spalk provides cloud-based commentary infrastructure for
+                sports broadcasters, including remote commentary,
+                multilingual talent, production services, and other
+                broadcast workflows.
               </p>
 
               <p>
-                I worked with Rive animations, Lenis smooth scrolling,
-                Finsweet CMS utilities, Swiper.js, custom JavaScript,
-                custom CSS, and several scroll-based interactions.
+                My role was focused on translating supplied designs into
+                the Webflow implementation and handling the interactive
+                pieces around it — including animation, CMS behavior,
+                media interactions, third-party libraries, and custom
+                front-end code.
               </p>
 
-              <p
-                className="
-                  font-medium
-                  text-[#29232d]
-                "
-              >
-                Basically, this was where “can Webflow do that?” started
-                turning into “okay, let me try.”
+              <p>
+                This became one of the projects where I started treating
+                Webflow less as an isolated visual builder and more as
+                the foundation of a broader front-end workflow.
               </p>
             </div>
           </div>
         </section>
 
-        {/* RIVE + LENIS */}
+        {/* CONTRIBUTIONS */}
         <section
           className="
-            border-y
-            border-[#e9e3ea]
-            py-16
-            md:py-20
+            relative
+            overflow-hidden
+            rounded-[32px]
+            border
+            border-[#e8e0f4]
+            bg-[#f7f3ff]/60
+            p-7
+            md:p-10
+            lg:p-12
           "
         >
           <div
+            aria-hidden="true"
             className="
-              grid
-              gap-12
-              lg:grid-cols-2
-              lg:gap-16
+              pointer-events-none
+              absolute
+              -right-16
+              -top-16
+              h-52
+              w-52
+              rounded-full
+              bg-[#b9a7ee]/15
+              blur-[70px]
             "
-          >
-            <div>
-              <p
-                className="
-                  mb-4
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
-                "
-              >
-                Rive + motion
-              </p>
+          />
 
-              <h2
-                className="
-                  max-w-xl
-                  text-3xl
-                  font-semibold
-                  leading-[1]
-                  tracking-[-0.045em]
-                  text-[#29232d]
-                  md:text-5xl
-                "
-              >
-                The animation part finally started clicking.
-              </h2>
-
-              <p
-                className="
-                  mt-6
-                  max-w-xl
-                  leading-7
-                  text-[#7d707a]
-                "
-              >
-                The project included Rive animations, and working with
-                them here helped me get much more comfortable bringing
-                interactive animation assets into Webflow and making them
-                feel like part of the page instead of something pasted on
-                top.
-              </p>
-            </div>
-
-            <div>
-              <p
-                className="
-                  mb-4
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
-                "
-              >
-                Smooth scroll
-              </p>
-
-              <p
-                className="
-                  max-w-xl
-                  text-2xl
-                  font-medium
-                  leading-snug
-                  tracking-[-0.035em]
-                  text-[#29232d]
-                "
-              >
-                This was also when Lenis started becoming part of my
-                toolkit.
-              </p>
-
-              <p
-                className="
-                  mt-5
-                  max-w-xl
-                  leading-7
-                  text-[#7d707a]
-                "
-              >
-                I started using Lenis for smoother scrolling and then
-                carried that experience into later projects whenever the
-                site benefited from a softer, more polished scroll feel.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* VIDEO TABS */}
-        <section className="py-20 md:py-24">
-          <div
-            className="
-              grid
-              gap-12
-              lg:grid-cols-[0.85fr_1.15fr]
-              lg:gap-20
-            "
-          >
-            <div>
-              <div
-                className="
-                  mb-5
-                  flex
-                  items-center
-                  gap-2
-                "
-              >
-                <Play
-                  size={15}
-                  className="text-[#d96c9b]"
-                />
-
+          <div className="relative z-10">
+            <div
+              className="
+                mb-10
+                grid
+                gap-6
+                lg:grid-cols-[0.8fr_1.2fr]
+              "
+            >
+              <div>
                 <p
                   className="
-                    text-sm
+                    text-xs
                     uppercase
                     tracking-[0.14em]
-                    text-[#7d707a]
+                    text-[#8f7ccf]
                   "
                 >
-                  Custom video tabs
+                  My contribution
                 </p>
               </div>
 
               <h2
                 className="
-                  max-w-lg
-                  text-4xl
+                  max-w-3xl
+                  text-3xl
                   font-semibold
-                  leading-[0.98]
-                  tracking-[-0.05em]
+                  tracking-[-0.045em]
                   text-[#29232d]
-                  md:text-5xl
+                  md:text-4xl
                 "
               >
-                Native Webflow tabs.
-                Custom behavior.
+                Where my Webflow toolkit started getting much bigger.
               </h2>
             </div>
 
+            <div className="grid gap-5 md:grid-cols-2">
+              {highlights.map((highlight) => {
+                const Icon = highlight.icon;
+
+                return (
+                  <div
+                    key={highlight.title}
+                    className="
+                      rounded-[28px]
+                      border
+                      border-white/80
+                      bg-white/55
+                      p-7
+                      shadow-[0_18px_50px_rgba(79,61,73,0.04)]
+                      backdrop-blur-xl
+                      md:p-8
+                    "
+                  >
+                    <div
+                      className="
+                        mb-6
+                        flex
+                        h-11
+                        w-11
+                        items-center
+                        justify-center
+                        rounded-full
+                        border
+                        border-[#eadff0]
+                        bg-white/70
+                        text-[#d96c9b]
+                      "
+                    >
+                      <Icon size={18} />
+                    </div>
+
+                    <h3
+                      className="
+                        text-xl
+                        font-semibold
+                        tracking-[-0.03em]
+                        text-[#29232d]
+                      "
+                    >
+                      {highlight.title}
+                    </h3>
+
+                    <p
+                      className="
+                        mt-3
+                        leading-7
+                        text-[#7d707a]
+                      "
+                    >
+                      {highlight.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* VIDEO TABS */}
+        <section
+          className="
+            grid
+            gap-10
+            py-20
+            md:py-28
+            lg:grid-cols-[0.8fr_1.2fr]
+            lg:gap-20
+          "
+        >
+          <div>
             <div
               className="
-                max-w-2xl
+                mb-5
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#d8cff4]
+                bg-white/60
+                text-[#806fbd]
+              "
+            >
+              <MonitorPlay size={18} />
+            </div>
+
+            <p
+              className="
+                text-sm
+                uppercase
+                tracking-[0.14em]
+                text-[#7d707a]
+              "
+            >
+              Custom video behavior
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                max-w-3xl
+                text-3xl
+                font-semibold
+                tracking-[-0.045em]
+                text-[#29232d]
+                md:text-4xl
+              "
+            >
+              Native Webflow tabs underneath. Custom video controls on
+              top.
+            </h2>
+
+            <div
+              className="
+                mt-6
+                max-w-3xl
                 space-y-5
-                leading-7
+                text-base
+                leading-8
                 text-[#7d707a]
               "
             >
               <p>
-                One section used Webflow&apos;s native Tabs component,
-                but every tab contained its own video.
+                One of the sections used Webflow&apos;s native Tabs
+                component, with a separate video living inside each tab.
               </p>
 
               <p>
-                I added custom JavaScript so users could manually play
-                each video and toggle the audio without the videos
-                fighting the tab behavior.
+                I added custom JavaScript around the component so users
+                could manually control playback and mute state without
+                the videos conflicting with the tab-switching behavior.
               </p>
 
-              <p
-                className="
-                  font-medium
-                  text-[#29232d]
-                "
-              >
-                It was one of those small features that made me realize I
-                was getting much more comfortable writing code around
-                Webflow instead of only staying inside its native tools.
+              <p>
+                It was a relatively contained feature, but it became one
+                of the moments where I felt much more comfortable
+                extending native Webflow components instead of working
+                only within their default behavior.
               </p>
             </div>
           </div>
+        </section>
 
-          {/* SIMPLE VISUAL */}
-          <div
+        {/* VIDEO VISUAL */}
+        <section
+          className="
+            rounded-[30px]
+            border
+            border-white/80
+            bg-white/46
+            p-6
+            shadow-[0_18px_50px_rgba(79,61,73,0.05)]
+            backdrop-blur-xl
+            md:p-8
+          "
+        >
+          <p
             className="
-              mt-12
-              grid
-              gap-4
-              md:grid-cols-3
+              mb-6
+              text-xs
+              uppercase
+              tracking-[0.14em]
+              text-[#9b8f99]
             "
           >
+            Interaction breakdown
+          </p>
+
+          <div className="grid gap-4 md:grid-cols-3">
             {["01", "02", "03"].map((tab, index) => (
               <div
                 key={tab}
                 className="
-                  group
                   rounded-[24px]
                   border
-                  border-white/80
-                  bg-white/48
+                  border-white/85
+                  bg-white/70
                   p-5
-                  shadow-[0_12px_32px_rgba(79,61,73,0.05)]
-                  backdrop-blur-xl
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:bg-white/66
                 "
               >
-                <div
-                  className="
-                    flex
-                    items-center
-                    justify-between
-                    gap-4
-                  "
-                >
-                  <span
-                    className="
-                      text-xs
-                      text-[#9b8f99]
-                    "
-                  >
+                <div className="flex items-center justify-between gap-4">
+                  <span className="text-xs text-[#9b8f99]">
                     Tab {tab}
                   </span>
 
@@ -619,104 +712,193 @@ export default function RelayPage() {
                   className="
                     mt-4
                     text-sm
+                    leading-6
                     text-[#7d707a]
                   "
                 >
                   {index === 0
-                    ? "Video plays when the user wants it to."
+                    ? "Each tab manages its own video."
                     : index === 1
-                    ? "Audio stays under the user’s control."
-                    : "Tabs switch without the videos getting confused."}
+                      ? "Playback stays under the user's control."
+                      : "Audio can be toggled independently."}
                 </p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* OTHER INTERACTIONS */}
+        {/* RIVE + LENIS */}
+        <section
+          className="
+            grid
+            gap-10
+            py-20
+            md:py-28
+            lg:grid-cols-[0.8fr_1.2fr]
+            lg:gap-20
+          "
+        >
+          <div>
+            <div
+              className="
+                mb-5
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#d8cff4]
+                bg-white/60
+                text-[#806fbd]
+              "
+            >
+              <Waves size={18} />
+            </div>
+
+            <p
+              className="
+                text-sm
+                uppercase
+                tracking-[0.14em]
+                text-[#7d707a]
+              "
+            >
+              Rive + motion
+            </p>
+          </div>
+
+          <div>
+            <h2
+              className="
+                max-w-3xl
+                text-3xl
+                font-semibold
+                tracking-[-0.045em]
+                text-[#29232d]
+                md:text-4xl
+              "
+            >
+              The point where animation started feeling like part of the
+              interface.
+            </h2>
+
+            <div
+              className="
+                mt-6
+                max-w-3xl
+                space-y-5
+                text-base
+                leading-8
+                text-[#7d707a]
+              "
+            >
+              <p>
+                Spalk gave me more hands-on experience integrating Rive
+                assets into a real Webflow build and making them feel
+                connected to the surrounding layout instead of simply
+                embedded into it.
+              </p>
+
+              <p>
+                It was also where I started using Lenis for smooth
+                scrolling. That combination made me pay more attention to
+                how individual interactions contributed to the overall
+                movement of a page.
+              </p>
+
+              <p>
+                I carried both of those lessons into later builds, where
+                animation and scrolling became things I considered much
+                earlier in the development process.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* SUPPORTING DETAILS */}
         <section
           className="
             border-y
             border-[#e9e3ea]
-            py-16
-            md:py-20
+            py-20
+            md:py-28
           "
         >
           <div
             className="
+              mb-10
               grid
-              gap-10
-              lg:grid-cols-[0.7fr_1.3fr]
-              lg:gap-20
+              gap-6
+              lg:grid-cols-[0.8fr_1.2fr]
             "
           >
-            <div>
-              <p
-                className="
-                  mb-4
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
-                "
-              >
-                Elsewhere in the build
-              </p>
+            <p
+              className="
+                text-sm
+                uppercase
+                tracking-[0.14em]
+                text-[#7d707a]
+              "
+            >
+              Elsewhere in the build
+            </p>
 
-              <h2
-                className="
-                  max-w-md
-                  text-4xl
-                  font-semibold
-                  leading-[0.98]
-                  tracking-[-0.05em]
-                  text-[#29232d]
-                  md:text-5xl
-                "
-              >
-                Lots of small things doing their job.
-              </h2>
-            </div>
+            <h2
+              className="
+                max-w-3xl
+                text-4xl
+                font-semibold
+                leading-[1]
+                tracking-[-0.05em]
+                text-[#29232d]
+                md:text-5xl
+              "
+            >
+              Lots of smaller pieces doing their job.
+            </h2>
+          </div>
 
-            <div className="grid gap-x-10 gap-y-8 md:grid-cols-2">
-              {[
-                {
-                  title: "Finsweet + CMS",
-                  description:
-                    "Used Finsweet utilities to extend CMS-driven sections and make the content behavior more flexible.",
-                },
-                {
-                  title: "Number scaling",
-                  description:
-                    "Built an animated number interaction that moves through values from 1 up past 100.",
-                },
-                {
-                  title: "Swiper.js",
-                  description:
-                    "Added draggable, swipeable content using Swiper.js where native Webflow interactions were not enough.",
-                },
-                {
-                  title: "Scroll text reveals",
-                  description:
-                    "Used scroll-triggered text reveals to add movement without turning every section into an animation showcase.",
-                },
-                {
-                  title: "Inverted corners",
-                  description:
-                    "Used custom CSS to create those inverted / cut-out corner shapes that are simple to look at and weirdly annoying to build.",
-                },
-              ].map((item) => (
+          <div className="grid gap-5 md:grid-cols-2">
+            {supportingWork.map((item) => {
+              const Icon = item.icon;
+
+              return (
                 <div
                   key={item.title}
                   className="
-                    border-t
-                    border-[#ddd6df]
-                    pt-5
+                    rounded-[28px]
+                    border
+                    border-white/80
+                    bg-white/50
+                    p-7
+                    shadow-[0_18px_50px_rgba(79,61,73,0.04)]
+                    backdrop-blur-xl
+                    md:p-8
                   "
                 >
+                  <div
+                    className="
+                      mb-6
+                      flex
+                      h-11
+                      w-11
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-[#eadff0]
+                      bg-white/70
+                      text-[#d96c9b]
+                    "
+                  >
+                    <Icon size={18} />
+                  </div>
+
                   <h3
                     className="
-                      text-lg
+                      text-xl
                       font-semibold
                       tracking-[-0.03em]
                       text-[#29232d]
@@ -727,159 +909,237 @@ export default function RelayPage() {
 
                   <p
                     className="
-                      mt-2
-                      text-sm
-                      leading-6
+                      mt-3
+                      leading-7
                       text-[#7d707a]
                     "
                   >
                     {item.description}
                   </p>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </section>
 
-        {/* LEARNING */}
-        <section className="py-20 md:py-24">
-          <div
-            className="
-              grid
-              gap-10
-              lg:grid-cols-[0.8fr_1.2fr]
-              lg:gap-20
-            "
-          >
-            <div>
-              <p
-                className="
-                  mb-4
-                  text-sm
-                  uppercase
-                  tracking-[0.14em]
-                  text-[#7d707a]
-                "
-              >
-                What I took from it
-              </p>
-
-              <h2
-                className="
-                  max-w-lg
-                  text-4xl
-                  font-semibold
-                  leading-[0.98]
-                  tracking-[-0.05em]
-                  text-[#29232d]
-                  md:text-5xl
-                "
-              >
-                Webflow is nicer when you stop being afraid to leave
-                Webflow.
-              </h2>
-            </div>
-
-            <div
-              className="
-                max-w-2xl
-                space-y-5
-                leading-7
-                text-[#7d707a]
-              "
-            >
-              <p>
-                This project made me much more comfortable combining
-                Webflow with animation tools, JavaScript libraries,
-                CMS utilities, and custom CSS whenever the native toolset
-                needed a little help.
-              </p>
-
-              <p>
-                It also changed how I approached later projects. Instead
-                of immediately asking whether Webflow had a native
-                feature for something, I started thinking more about
-                what behavior I actually needed and what tool made the
-                most sense for it.
-              </p>
-
-              <p
-                className="
-                  font-medium
-                  text-[#29232d]
-                "
-              >
-                Turns out the answer is occasionally “some JavaScript
-                and a mildly unreasonable amount of testing.”
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* CLOSING */}
-        <section
-          className="
-            rounded-[30px]
-            border
-            border-white/80
-            bg-white/48
-            px-7
-            py-10
-            shadow-[0_20px_60px_rgba(79,61,73,0.06)]
-            backdrop-blur-xl
-            md:px-10
-            md:py-12
-          "
-        >
+        {/* TECH */}
+        <section className="py-16 md:py-20">
           <div
             className="
               flex
               flex-col
-              gap-7
+              gap-6
               md:flex-row
-              md:items-end
+              md:items-center
               md:justify-between
             "
           >
             <div>
               <p
                 className="
-                  mb-3
                   text-xs
                   uppercase
                   tracking-[0.14em]
-                  text-[#9b8f99]
+                  text-[#aaa0a8]
                 "
               >
-                End note
+                Tools & technologies
               </p>
 
               <h2
                 className="
-                  max-w-2xl
-                  text-3xl
+                  mt-2
+                  text-2xl
                   font-semibold
-                  leading-[1]
-                  tracking-[-0.045em]
+                  tracking-[-0.035em]
                   text-[#29232d]
-                  md:text-5xl
                 "
               >
-                Rive, Lenis, Swiper, custom code...
-                <br />
-                Webflow survived.
+                What I worked with
               </h2>
             </div>
 
-            <Button
-              href="/#contact"
-              variant="secondary"
-              showArrow={false}
-              className="w-fit shrink-0 px-6 py-3"
-            >
-              Work with me
-            </Button>
+            <div className="flex max-w-2xl flex-wrap gap-2">
+              {technologies.map((technology) => (
+                <span
+                  key={technology}
+                  className="
+                    rounded-full
+                    border
+                    border-white
+                    bg-white/60
+                    px-4
+                    py-2
+                    text-sm
+                    text-[#7d707a]
+                  "
+                >
+                  {technology}
+                </span>
+              ))}
+            </div>
           </div>
+        </section>
+
+        {/* TAKEAWAY */}
+        <section
+          className="
+            rounded-[32px]
+            border
+            border-white/80
+            bg-white/50
+            p-7
+            shadow-[0_18px_55px_rgba(79,61,73,0.05)]
+            backdrop-blur-xl
+            md:p-10
+            lg:p-12
+          "
+        >
+          <div
+            className="
+              grid
+              gap-8
+              lg:grid-cols-[0.8fr_1.2fr]
+              lg:gap-16
+            "
+          >
+            <div>
+              <p
+                className="
+                  text-sm
+                  uppercase
+                  tracking-[0.14em]
+                  text-[#7d707a]
+                "
+              >
+                What stuck with me
+              </p>
+            </div>
+
+            <div>
+              <h2
+                className="
+                  max-w-3xl
+                  text-3xl
+                  font-semibold
+                  leading-[1.05]
+                  tracking-[-0.045em]
+                  text-[#29232d]
+                  md:text-4xl
+                "
+              >
+                Webflow got more useful once I stopped treating it as the
+                entire toolbox.
+              </h2>
+
+              <p
+                className="
+                  mt-6
+                  max-w-3xl
+                  text-base
+                  leading-8
+                  text-[#7d707a]
+                "
+              >
+                Spalk made me much more comfortable combining Webflow
+                with Rive, third-party libraries, CMS utilities, custom
+                JavaScript, and CSS whenever the interaction called for
+                something beyond the native toolset.
+              </p>
+
+              <p
+                className="
+                  mt-5
+                  max-w-3xl
+                  text-base
+                  leading-8
+                  text-[#7d707a]
+                "
+              >
+                Instead of asking only whether Webflow could do
+                something natively, I started thinking more about the
+                behavior the design actually needed and choosing the
+                right implementation for it.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* LIVE SITE */}
+        <section
+          className="
+            mt-16
+            flex
+            flex-col
+            gap-6
+            border-t
+            border-[#e9e3ea]
+            pt-10
+            md:flex-row
+            md:items-center
+            md:justify-between
+          "
+        >
+          <div>
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-[0.14em]
+                text-[#aaa0a8]
+              "
+            >
+              See it in the wild
+            </p>
+
+            <p
+              className="
+                mt-2
+                max-w-lg
+                text-sm
+                leading-6
+                text-[#7d707a]
+              "
+            >
+              Visit the public Spalk website to explore the finished
+              Webflow implementation and interactions.
+            </p>
+          </div>
+
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group
+              inline-flex
+              items-center
+              gap-3
+              text-sm
+              font-medium
+              text-[#806fbd]
+              underline
+              decoration-[#cfc3ef]
+              decoration-2
+              underline-offset-4
+              transition-colors
+              duration-300
+              hover:text-[#d96c9b]
+              hover:decoration-[#efa6c1]
+            "
+          >
+            Visit Spalk
+
+            <ArrowUpRight
+              size={16}
+              className="
+                transition-transform
+                duration-300
+                group-hover:translate-x-0.5
+                group-hover:-translate-y-0.5
+              "
+            />
+          </a>
         </section>
       </Container>
     </main>

@@ -1,3 +1,4 @@
+
 import { EyeOff } from "lucide-react";
 
 import Container from "../layout/Container";
@@ -25,7 +26,7 @@ export default function Projects() {
             Selected Web Development Work
           </p>
 
-          {/* TOP ROW — HEADING + INTERMISSION */}
+          {/* TOP ROW — HEADING + CONTEXT */}
           <div
             className="
               grid
@@ -79,7 +80,7 @@ export default function Projects() {
                     text-[#5f5560]
                   "
                 >
-                  A tiny confidentiality intermission:
+                  A quick project note:
                 </p>
 
                 <p
@@ -90,8 +91,9 @@ export default function Projects() {
                     text-[#8b7f89]
                   "
                 >
-                  Some projects completed through my current company are shown under alternative names to protect client confidentiality. The work shown reflects projects I primarily developed and implemented.
-
+                  Some featured websites were completed as part of my professional work. 
+                  I highlight my development contributions using only 
+                  publicly available project details.
                 </p>
               </div>
             </div>

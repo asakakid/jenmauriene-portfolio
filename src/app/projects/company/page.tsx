@@ -3,7 +3,7 @@ import Link from "next/link";
 import {
   ArrowLeft,
   ArrowUpRight,
-  EyeOff,
+  BriefcaseBusiness,
   Sparkles,
 } from "lucide-react";
 
@@ -12,27 +12,27 @@ import Container from "@/src/components/layout/Container";
 const companyProjects = [
   {
     id: 1,
-    title: "Project Northstar",
+    title: "Solerabank",
     eyebrow: "Webflow Development",
     description:
-      "My first full project assignment — a multi-page Webflow build from supplied designs, built with a clean Client-First structure and a tiny search interaction I’m still a little too proud of.",
-    image: "/images/projects/project-01.jpg",
+      "My first full Webflow project assignment — translating supplied designs into a responsive multi-page build using Client-First, reusable components, and a custom search interaction.",
+    image: "/images/projects/solerabank.png",
     technologies: [
       "Webflow",
       "Client-First",
       "Components",
     ],
     href: "/projects/company/northstar",
-    note: "First full assignment",
+    note: "My first full Webflow project assignment",
   },
 
-    {
+  {
     id: 2,
-    title: "Project Relay",
+    title: "Spalk",
     eyebrow: "Webflow Development · Interactions",
     description:
-      "A sports-tech website where Webflow started feeling less like a visual builder and more like a front-end playground — Rive, Lenis, CMS utilities, custom video controls, Swiper.js, and a lot of interaction work.",
-    image: "/images/projects/project-02.jpg",
+      "A sports-tech website I developed in Webflow, with Rive animations, Lenis smooth scrolling, CMS functionality, custom video controls, Swiper.js, and interaction-heavy front-end work.",
+    image: "/images/projects/spalk.png",
     technologies: [
       "Webflow",
       "Rive",
@@ -42,17 +42,16 @@ const companyProjects = [
       "Custom Code",
     ],
     href: "/projects/company/relay",
-    note: "Where custom code started getting fun",
+    note: "Where custom interactions started getting fun",
   },
-
 
   {
     id: 3,
-    title: "Project Pulse",
+    title: "Jorie AI",
     eyebrow: "Webflow Development · Custom Integration",
     description:
-      "A healthcare-AI website with more advanced Rive interactions, CMS-driven layouts, marquee motion, and a custom Shopify integration for the client's merch experience.",
-    image: "/images/projects/project-03.jpg",
+      "A healthcare-AI website I developed in Webflow, featuring more advanced Rive interactions, CMS-driven layouts, marquee motion, and a custom Shopify integration for its merch experience.",
+    image: "/images/projects/jorie-ai.png",
     technologies: [
       "Webflow",
       "Rive",
@@ -63,6 +62,61 @@ const companyProjects = [
     href: "/projects/company/pulse",
     note: "The one where Webflow met Shopify",
   },
+
+  {
+    id: 4,
+    title: "Ron J. West",
+    eyebrow: "Webflow Development · AI-Assisted Build",
+    description:
+      "An executive coaching and leadership development website for Ron J. West, covering his coaching, advisory services, and Chrysalis leadership framework. The initial Webflow implementation was accelerated through an AI-assisted Claude/MCP workflow, then I took over the project to refine the build, align it closely with the supplied design and client expectations, and complete the experience with extensive custom code.",
+    image: "/images/projects/ron-j-west.png",
+    technologies: [
+      "Webflow",
+      "Claude",
+      "MCP",
+      "Custom Code",
+      "Responsive Development",
+    ],
+    href: "/projects/company/ron-j-west",
+    note: "My first full project built around an AI-assisted Webflow workflow",
+  },
+
+  {
+  id: 5,
+  title: "Ignition Benefits",
+  eyebrow: "Webflow Development · Rebrand",
+  description:
+    "An employee benefits platform helping companies better understand, compare, and manage their benefits costs. I handled the Webflow implementation of a client-led rebrand, reskinning the existing website across its pages to match the new Figma designs and updated visual identity while preserving the underlying site structure and functionality.",
+  image: "/images/projects/ignition-benefits.png",
+  technologies: [
+    "Webflow",
+    "Figma",
+    "Responsive Development",
+    "Components",
+    "Client-First",
+  ],
+  href: "/projects/company/ignition-benefits",
+  note: "A full-site rebrand without rebuilding from scratch",
+},
+{
+  id: 6,
+  title: "HZM Europa",
+  eyebrow: "Webflow Development · Map Integration",
+  description:
+    "A heavy-equipment website built from supplied Figma designs in Webflow, with CMS-driven product content and a custom dealer-finder experience using Mapbox and location search functionality.",
+  image: "/images/projects/hzm.png",
+  technologies: [
+    "Webflow",
+    "Figma",
+    "Webflow CMS",
+    "Mapbox",
+    "JavaScript",
+    "API Integration",
+    "Responsive Development",
+  ],
+  href: "/projects/company/hzm-europa",
+  note: "Where Webflow met maps and location search",
+},
 ];
 
 export default function CompanyProjectsPage() {
@@ -166,7 +220,7 @@ export default function CompanyProjectsPage() {
                   text-[#7d707a]
                 "
               >
-                Company Projects
+                Professional Work
               </p>
 
               <h1
@@ -180,9 +234,9 @@ export default function CompanyProjectsPage() {
                   md:text-7xl
                 "
               >
-                The work is real.
+                Client work,
                 <br />
-                The names are undercover.
+                through my developer lens.
               </h1>
 
               <p
@@ -194,14 +248,14 @@ export default function CompanyProjectsPage() {
                   text-[#7d707a]
                 "
               >
-                A collection of websites I&apos;ve worked on through
-                Dorxata — from full builds to fixes, revisions, and the
-                little details that made me stop and go, “okay, I like
-                that.”
+                A selection of websites I&apos;ve worked on through
+                Dorxata, where I served as the primary Webflow developer
+                on the projects featured here. Each case study focuses
+                on the development work I personally handled.
               </p>
             </div>
 
-            {/* CONFIDENTIALITY NOTE */}
+            {/* PROJECT NOTE */}
             <div
               className="
                 lg:flex
@@ -221,7 +275,7 @@ export default function CompanyProjectsPage() {
                   backdrop-blur-xl
                 "
               >
-                <EyeOff
+                <BriefcaseBusiness
                   size={16}
                   className="mb-4 text-[#8f7ccf]"
                 />
@@ -235,7 +289,7 @@ export default function CompanyProjectsPage() {
                     text-[#9b8f99]
                   "
                 >
-                  A small note before snooping
+                  A quick project note
                 </p>
 
                 <p
@@ -246,9 +300,9 @@ export default function CompanyProjectsPage() {
                     text-[#6f636d]
                   "
                 >
-                  Client names are intentionally left out, so the
-                  projects here use aliases instead. I&apos;ll still tell
-                  you what I worked on, what I built, and what I learned.
+                  These projects were completed through Dorxata. I&apos;m
+                  highlighting my development contributions using only
+                  publicly available project details.
                 </p>
 
                 <p
@@ -259,7 +313,7 @@ export default function CompanyProjectsPage() {
                     text-[#9b8f99]
                   "
                 >
-                  Mystery, but make it contractual. ✦
+                  The websites belong to their respective owners. ✦
                 </p>
               </div>
             </div>
@@ -303,7 +357,7 @@ export default function CompanyProjectsPage() {
                   md:text-5xl
                 "
               >
-                Things I&apos;ve shipped at work.
+                Websites I&apos;ve helped bring to life.
               </h2>
             </div>
 
@@ -315,8 +369,9 @@ export default function CompanyProjectsPage() {
                 text-[#8b7f89]
               "
             >
-              Each one has its own little story — what I was given,
-              what I handled, and the part that stuck with me.
+              Each one has its own story — the project I was handed,
+              the development work I handled, and the techniques I
+              picked up along the way.
             </p>
           </div>
 
@@ -357,7 +412,7 @@ export default function CompanyProjectsPage() {
                 >
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} website`}
                     fill
                     className="
                       object-cover
@@ -582,9 +637,9 @@ export default function CompanyProjectsPage() {
                 text-[#8b7f89]
               "
             >
-              More company work will live here as I document it without
-              accidentally giving the confidentiality department a
-              reason to know my name.
+              More professional work will live here as I continue
+              documenting the projects, challenges, and development
+              techniques that have shaped how I build for the web.
             </p>
 
             <Link
@@ -608,6 +663,7 @@ export default function CompanyProjectsPage() {
               "
             >
               Explore the other work
+
               <span
                 className="
                   transition-transform
