@@ -105,7 +105,7 @@ export default function Footer() {
               />
 
               <a
-                href="https://linkedin.com/in/YOUR-USERNAME"
+                href="https://www.linkedin.com/in/jenmauriene"
                 target="_blank"
                 rel="noreferrer"
                 className="
@@ -129,7 +129,7 @@ export default function Footer() {
               />
 
               <a
-                href="https://github.com/YOUR-USERNAME"
+                href="https://github.com/asakakid"
                 target="_blank"
                 rel="noreferrer"
                 className="
