@@ -106,8 +106,6 @@ export default function Footer() {
 
               <a
                 href="https://www.linkedin.com/in/jenmauriene"
-                target="_blank"
-                rel="noreferrer"
                 className="
                   text-[#7d707a]
                   transition-colors
@@ -130,8 +128,6 @@ export default function Footer() {
 
               <a
                 href="https://github.com/asakakid"
-                target="_blank"
-                rel="noreferrer"
                 className="
                   text-[#7d707a]
                   transition-colors
