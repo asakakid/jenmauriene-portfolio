@@ -163,7 +163,7 @@ export default function Contact() {
 
                 <div className="space-y-4">
                   <a
-                    href="mailto:your@email.com"
+                    href="mailto:builtbyjenmauriene@gmail.com"
                     className="
                       group
                       flex
